@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INNOV ECO GREEN – Rénovation & Dépannage</title>
+  <meta name="description" content="Innov Eco Green, experts en rénovation et dépannage en Île-de-France – Garantie décennale, avis clients 5⭐, devis gratuit 7J/7." />
+  <meta property="og:title" content="INNOV ECO GREEN – Rénovation & Dépannage" />
+  <meta property="og:description" content="Experts en rénovation en Île-de-France, garantie décennale, excellents avis Google." />
+  <meta property="og:image" content="https://votre-domaine.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & Base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1e1e1e; background: #fff; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* Header */
+    header[role="banner"] { display: flex; justify-content: space-between; align-items: center; padding: 2rem; border-bottom: 1px solid #eee; flex-wrap: wrap; }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 1.5rem; }
+    nav[role="navigation"] { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    nav a { margin: 0 0.5rem; font-weight: 500; }
+    .btn-call { background: #000; color: #fff; padding: 0.8rem 1.2rem; border-radius: 10px; font-weight: bold; }
+
+    /* Hero */
+    .hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 4rem 2rem; }
+    .hero-text { flex: 1; }
+    .hero-text h2 { font-size: 2.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
+    .hero-text p { font-size: 1.1rem; margin-bottom: 2rem; }
+    .btn-devis { background: #000; color: #fff; padding: 1rem 2rem; border-radius: 10px; font-weight: bold; }
+    .hero-image { flex: 1; padding-left: 2rem; }
+    .hero-image img { border-radius: 20px; }
+
+    /* Section Titles */
+    .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; text-align: center; margin: 4rem 0 2rem; }
+
+    /* Services */
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 2rem; }
+    .service { background: #f9f9f9; padding: 1rem; border-radius: 10px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+    .service img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 1rem; }
+
+    /* Google Reviews */
+    .reviews { text-align: center; padding: 2rem; background: #fff8e1; }
+    .reviews img { display: block; margin: 1rem auto; width: 120px; }
+
+    /* Partners */
+    .partners { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; padding: 2rem; justify-items: center; }
+    .partner { background: #f8f8f8; padding: 1rem; border-radius: 15px; text-align: center; box-shadow: 0 0 8px rgba(0,0,0,0.04); }
+    .partner img { max-height: 50px; object-fit: contain; margin-bottom: 0.5rem; }
+
+    /* Testimonials */
+    .testimonials { padding: 2rem; background-color: #f9f9f9; }
+    .testimonial { max-width: 600px; margin: 1rem auto; font-style: italic; border-left: 4px solid #000; padding-left: 1rem; }
+
+    /* Contact Form */
+    .contact-form { padding: 2rem; background: #fff; display: flex; justify-content: center; }
+    .contact-form form { max-width: 600px; width: 100%; display: flex; flex-direction: column; gap: 1rem; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+    .contact-form input, .contact-form textarea { padding: 1rem; border: 1px solid #ccc; border-radius: 10px; font-size: 1rem; }
+    .contact-form button { padding: 1rem; background: #000; color: #fff; font-weight: bold; border: none; border-radius: 10px; cursor: pointer; }
+    .contact-form .hp { display: none; }
+
+    /* Footer */
+    footer { padding: 2rem; text-align: center; background: #f1f1f1; margin-top: 4rem; }
+    footer nav { margin-bottom: 1rem; }
+    footer nav a { margin: 0 0.5rem; font-weight: 500; }
+    footer p { color: #555; font-size: 0.9rem; }
+
+    /* Responsive */
+    @media(max-width:768px) { .hero-image { margin-top: 2rem; padding-left:0; } }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>INNOV ECO GREEN <span style="font-family: cursive; font-size: 1rem;">Rénovation &amp; Dépannage</span></h1>
+    <nav role="navigation" aria-label="Menu principal">
+      <a href="#services">Prestations</a>
+      <a href="#avis">Avis</a>
+      <a href="#devis">Devis</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:0752892815" class="btn-call">📞 07 52 89 28 15</a>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <h2 id="hero-title">Les experts de la rénovation en Île-de-France</h2>
+      <p>Innov Eco Green est une entreprise de rénovation de qualité, composée d'artisans spécialisés avec <strong>garantie décennale</strong>.</p>
+      <a class="btn-devis" href="#devis">📄 Devis gratuit 7J/7</a>
+    </div>
+    <div class="hero-image">
+      <img src="hero.jpg" alt="Chantier de rénovation" loading="lazy" />
+    </div>
+  </section>
+
+  <h2 class="section-title" id="services">Notre savoir-faire : entreprise tous corps d'état</h2>
+  <section class="services">
+    <div class="service"><img src="electrician.jpg" alt="Électricité"><h3>Électricité</h3><p>Travaux électriques complets : installation, rénovation, éclairage et sécurité.</p></div>
+    <div class="service"><img src="plumber.jpg" alt="Plomberie"><h3>Plomberie</h3><p>Installation et rénovation de tuyauterie, salles de bains, cuisines et sanitaires.</p></div>
+    <div class="service"><img src="peint.jpg" alt="Peinture"><h3>Peinture</h3><p>Peinture intérieure et extérieure, finitions soignées et durables.</p></div>
+    <div class="service"><img src="sol.jpg" alt="Sols"><h3>Sols</h3><p>Pose de carrelage, parquet, lino, et rénovation de tous types de revêtements.</p></div>
+    <div class="service"><img src="menuis.jpg" alt="Menuiserie"><h3>Menuiserie</h3><p>Création et rénovation de meubles, portes, fenêtres et agencements sur mesure.</p></div>
+    <div class="service"><img src="plat.jpg" alt="Plâtrerie"><h3>Plâtrerie</h3><p>Montage de cloisons, faux plafonds, enduits et finitions en plâtre.</p></div>
+    <div class="service"><img src="macon.jpg" alt="Maçonnerie"><h3>Maçonnerie</h3><p>Construction de murs, ouvertures, fondations et rénovation de structures.</p></div>
+    <div class="service"><img src="serr.jpg" alt="Serrurerie & Métallerie"><h3>Serrurerie & Métallerie</h3><p>Structures métalliques, sécurité et ouverture de portes.</p></div>
+    <div class="service"><img src="roof.jpg" alt="Charpente & Couverture"><h3>Charpente & Couverture</h3><p>Travaux de toiture, charpente bois ou métal, étanchéité et isolation.</p></div>
+  </section>
+
+  <section class="reviews">
+    <h2 class="section-title">Excellents avis sur Google</h2>
+    <p>Nous sommes fiers de nos <strong>4,9⭐</strong> sur Google Reviews.</p>
+    <a href="https://.com/google-reviews-ieg-page" target="_blank" rel="noopener noreferrer"><img src="google.png" alt="Badge Avis Google" /></a>
+  </section>
+
+  <h2 class="section-title" id="partenaires">Nos fournisseurs et partenaires</h2>
+  <section class="partners">
+    <div class="partner"><img src="cedeo.jpg" alt="Cedeo"><p>Cedeo</p></div>
+    <div class="partner"><img src="schneider.png" alt="Schneider Electric"><p>Schneider Electric</p></div>
+    <div class="partner"><img src="pointp.png" alt="Point P"><p>Point P</p></div>
+    <div class="partner"><img src="schmidt.png" alt="Schmidt"><p>Schmidt</p></div>
+    <div class="partner"><img src="unikalo.png" alt="Unikalo"><p>Unikalo</p></div>
+    <div class="partner"><img src="wendel.png" alt="Wendel"><p>Wendel</p></div>
+  </section>
+
+  <h2 class="section-title" id="avis">Témoignages clients</h2>
+  <section class="testimonials">
+    <div class="testimonial"><p>"Service impeccable ! Les travaux ont été réalisés avec professionnalisme et dans les délais."</p><strong>- Marie T., Paris</strong></div>
+    <div class="testimonial"><p>"Équipe réactive et à l'écoute. Le résultat dépasse nos attentes. Merci Innov Eco Green !"</p><strong>- Julien R., Saint-Denis</strong></div>
+    <div class="testimonial"><p>"Professionnels à l'écoute, devis clair et sans surprise. Très satisfait !"</p><strong>- Amine R., Versailles</strong></div>
+  </section>
+
+  <h2 class="section-title" id="devis">Demande de devis</h2>
+  <section class="contact-form" id="contact">
+    <form action="send.php" method="POST" novalidate>
+      <input type="text" name="name" placeholder="Nom complet" required />
+      <input type="email" name="email" placeholder="Adresse email" required />
+      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+      <div class="hp"><label>HP<input type="text" name="website" /></label></div>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer role="contentinfo">
+    <nav aria-label="Liens de pied de page">
+      <a href="#services">Prestations</a> | <a href="#avis">Avis</a> | <a href="#partenaires">Partenaires</a> | <a href="#devis">Devis</a> | <a href="#contact">Contact</a>
+    </nav>
+    <p>&copy; 2025 INNOV ECO GREEN. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
