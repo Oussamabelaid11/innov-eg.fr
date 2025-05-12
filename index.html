@@ -12,11 +12,39 @@
   <link rel="icon" href="favicon.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: 'Inter', sans-serif; color: #1e1e1e; background: #fff; line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; height: auto; }
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+      transition: all 0.3s ease;
+    }
+    html { 
+      scroll-behavior: smooth; 
+      font-size: 16px; 
+    }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      color: #1e1e1e; 
+      background: #fff; 
+      line-height: 1.6; 
+    }
+    a { 
+      color: inherit; 
+      text-decoration: none; 
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+    a:hover {
+      color: #555;
+      transform: scale(1.05);
+    }
+    img { 
+      display: block; 
+      max-width: 100%; 
+      height: auto; 
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
     header[role="banner"] {
       display: flex;
@@ -25,8 +53,18 @@
       padding: 1rem;
       border-bottom: 1px solid #eee;
       flex-wrap: wrap;
+      background-color: #f9f9f9;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    header h1 { font-family: 'Playfair Display', serif; font-size: 1.25rem; }
+    header h1 { 
+      font-family: 'Playfair Display', serif; 
+      font-size: 1.25rem; 
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     nav[role="navigation"] {
       display: flex;
       flex-wrap: wrap;
@@ -34,7 +72,15 @@
       justify-content: center;
       margin: 1rem 0;
     }
-    nav a { font-weight: 500; font-size: 0.95rem; }
+    nav a { 
+      font-weight: 500; 
+      font-size: 0.95rem; 
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #f1f1f1;
+    }
     .btn-call {
       background: #000;
       color: #fff;
@@ -42,6 +88,12 @@
       border-radius: 10px;
       font-weight: bold;
       font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn-call:hover {
+      background: #333;
     }
 
     .hero {
@@ -50,15 +102,20 @@
       align-items: center;
       padding: 2rem 1rem;
       text-align: center;
+      background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
     }
     .hero-text h2 {
       font-size: 1.75rem;
       margin-bottom: 1rem;
       font-family: 'Playfair Display', serif;
+      color: #1a1a1a;
     }
     .hero-text p {
       font-size: 1rem;
       margin-bottom: 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .btn-devis {
       background: #000;
@@ -66,34 +123,75 @@
       padding: 0.8rem 1.6rem;
       border-radius: 10px;
       font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
-    .hero-image { margin-top: 2rem; }
+    .btn-devis:hover {
+      background: #333;
+    }
+    .hero-image { 
+      margin-top: 2rem; 
+      max-width: 800px;
+      width: 100%;
+    }
 
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       text-align: center;
       margin: 3rem 1rem 1.5rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: #000;
     }
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
       padding: 0 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      opacity: 1 !important; /* Ensure visibility */
     }
     .service {
       background: #f9f9f9;
-      padding: 1rem;
-      border-radius: 10px;
+      padding: 1.5rem;
+      border-radius: 15px;
       text-align: center;
-      box-shadow: 0 0 8px rgba(0,0,0,0.04);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      transform: translateY(0) scale(1) !important; /* Override any animation issues */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 1 !important; /* Ensure visibility */
+    }
+    .service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     .service img {
-      height: 120px;
+      height: 200px;
+      width: 100%;
       object-fit: cover;
-      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: block; /* Ensure images are displayed */
+    }
+    .service h3 {
       margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .service p {
+      font-size: 0.95rem;
+      color: #666;
     }
 
     .reviews {
@@ -103,27 +201,37 @@
     }
     .reviews img {
       margin: 1rem auto;
-      width: 100px;
+      width: 150px;
+      transition: transform 0.3s ease;
+    }
+    .reviews img:hover {
+      transform: scale(1.1);
     }
 
     .partners {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
       padding: 1rem;
       justify-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .partner {
       background: #f8f8f8;
-      padding: 1rem;
-      border-radius: 10px;
+      padding: 1.5rem;
+      border-radius: 15px;
       text-align: center;
-      box-shadow: 0 0 6px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+    .partner:hover {
+      transform: scale(1.05);
     }
     .partner img {
-      max-height: 40px;
+      max-height: 60px;
       object-fit: contain;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.5rem;
     }
 
     .testimonials {
@@ -131,11 +239,19 @@
       background-color: #f9f9f9;
     }
     .testimonial {
-      max-width: 500px;
-      margin: 1rem auto;
+      max-width: 700px;
+      margin: 2rem auto;
       font-style: italic;
-      border-left: 4px solid #000;
-      padding-left: 1rem;
+      border-left: 6px solid #000;
+      padding-left: 1.5rem;
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .testimonial.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .contact-form {
@@ -151,8 +267,9 @@
       flex-direction: column;
       gap: 1rem;
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      background: #f9f9f9;
     }
     .contact-form input,
     .contact-form textarea {
@@ -160,6 +277,13 @@
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #000;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+      outline: none;
     }
     .contact-form button {
       padding: 0.9rem;
@@ -169,6 +293,11 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .contact-form button:hover {
+      background: #333;
+      transform: scale(1.02);
     }
     .contact-form .hp { display: none; }
 
@@ -178,27 +307,72 @@
       background: #f1f1f1;
       margin-top: 3rem;
     }
-    footer nav { margin-bottom: 1rem; font-size: 0.9rem; }
-    footer p { color: #555; font-size: 0.85rem; }
+    footer nav { 
+      margin-bottom: 1rem; 
+      font-size: 0.9rem; 
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    footer p { 
+      color: #555; 
+      font-size: 0.85rem; 
+    }
+
+    @media (max-width: 768px) {
+      header[role="banner"] {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav[role="navigation"] {
+        margin: 1rem 0;
+      }
+    }
+
+    /* Animation for page load */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    body > section, body > h2 {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      animation-delay: 0.2s;
+    }
   </style>
 </head>
 <body>
   <header role="banner">
-    <h1>INNOV ECO GREEN <span style="font-family: cursive; font-size: 1rem;">Rénovation &amp; Dépannage</span></h1>
+    <h1>
+      INNOV ECO GREEN 
+      <span style="font-family: cursive; font-size: 1rem;">Rénovation &amp; Dépannage</span>
+    </h1>
     <nav role="navigation" aria-label="Menu principal">
       <a href="#services">Prestations</a>
       <a href="#avis">Avis</a>
       <a href="#devis">Devis</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="tel:0752892815" class="btn-call">📞 07 52 89 28 15</a>
+    <a href="tel:0752892815" class="btn-call">
+      <span>📞</span> 07 52 89 28 15
+    </a>
   </header>
 
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-text">
-      <h2 id="hero-title">Les experts de la rénovation, Paris et île de France</h2>
+      <h2 id="hero-title">Les experts de la rénovation, Paris et île de France</h2>
       <p>Innov Eco Green est une entreprise de rénovation de qualité, composée d'artisans spécialisés avec <strong>garantie décennale</strong>.</p>
-      <a class="btn-devis" href="#devis">📄 Devis gratuit 7J/7</a>
+      <a class="btn-devis" href="#devis">
+        <span>📄</span> Devis gratuit 7J/7
+      </a>
     </div>
     <div class="hero-image">
       <img src="hero.jpg" alt="Chantier de rénovation" loading="lazy" />
@@ -207,35 +381,88 @@
 
   <h2 class="section-title" id="services">Notre savoir-faire : entreprise tous corps d'état</h2>
   <section class="services">
-    <div class="service"><img src="electrician.jpg" alt="Électricité"><h3>Électricité</h3><p>Travaux électriques complets : installation, rénovation, éclairage et sécurité.</p></div>
-    <div class="service"><img src="plumber.jpg" alt="Plomberie"><h3>Plomberie</h3><p>Installation et rénovation d’installation sanitaire et chauffage, salle de bain, cuisine…</p></div>
-    <div class="service"><img src="peint.jpg" alt="Peinture"><h3>Peinture</h3><p>Peinture intérieure et extérieure, finitions soignées et durables.</p></div>
-    <div class="service"><img src="sol.jpg" alt="Sols"><h3>Sols</h3><p>Pose de carrelage, parquet, lino, et rénovation de tous types de revêtements.</p></div>
-    <div class="service"><img src="plat.jpg" alt="Plâtrerie"><h3>Plâtrerie</h3><p>Montage de cloisons, faux plafonds, enduits et finitions en plâtre.</p></div>
-    <div class="service"><img src="macon.jpg" alt="Maçonnerie"><h3>Maçonnerie</h3><p>Construction de murs, ouvertures, fondations et rénovation de structures.</p></div>
+    <div class="service">
+      <img src="electrician.jpg" alt="Électricité">
+      <h3>Électricité</h3>
+      <p>Travaux électriques complets : installation, rénovation, éclairage et sécurité.</p>
+    </div>
+    <div class="service">
+      <img src="plumber.jpg" alt="Plomberie">
+      <h3>Plomberie</h3>
+      <p>Installation et rénovation d'installation sanitaire et chauffage, salle de bain, cuisine…</p>
+    </div>
+    <div class="service">
+      <img src="peint.jpg" alt="Peinture">
+      <h3>Peinture</h3>
+      <p>Peinture intérieure et extérieure, finitions soignées et durables.</p>
+    </div>
+    <div class="service">
+      <img src="sol.jpg" alt="Sols">
+      <h3>Sols</h3>
+      <p>Pose de carrelage, parquet, lino, et rénovation de tous types de revêtements.</p>
+    </div>
+    <div class="service">
+      <img src="plat.jpg" alt="Plâtrerie">
+      <h3>Plâtrerie</h3>
+      <p>Montage de cloisons, faux plafonds, enduits et finitions en plâtre.</p>
+    </div>
+    <div class="service">
+      <img src="macon.jpg" alt="Maçonnerie">
+      <h3>Maçonnerie</h3>
+      <p>Construction de murs, ouvertures, fondations et rénovation de structures.</p>
+    </div>
   </section>
 
   <section class="reviews">
     <h2 class="section-title">Excellents avis sur Google</h2>
     <p>Nous sommes fiers de nos <strong>4,9⭐</strong> sur Google Reviews.</p>
-    <a href="https://.com/google-reviews-ieg-page" target="_blank" rel="noopener noreferrer"><img src="google.png" alt="Badge Avis Google" /></a>
+    <a href="https://.com/google-reviews-ieg-page" target="_blank" rel="noopener noreferrer">
+      <img src="google.png" alt="Badge Avis Google" />
+    </a>
   </section>
 
   <h2 class="section-title" id="partenaires">Nos fournisseurs et partenaires</h2>
   <section class="partners">
-    <div class="partner"><img src="cedeo.jpg" alt="Cedeo"><p>Cedeo</p></div>
-    <div class="partner"><img src="schneider.png" alt="Schneider Electric"><p>Schneider Electric</p></div>
-    <div class="partner"><img src="pointp.png" alt="Point P"><p>Point P</p></div>
-    <div class="partner"><img src="schmidt.png" alt="Schmidt"><p>Schmidt</p></div>
-    <div class="partner"><img src="unikalo.png" alt="Unikalo"><p>Unikalo</p></div>
-    <div class="partner"><img src="wendel.png" alt="Wendel"><p>Wendel</p></div>
+    <div class="partner">
+      <img src="cedeo.jpg" alt="Cedeo">
+      <p>Cedeo</p>
+    </div>
+    <div class="partner">
+      <img src="schneider.png" alt="Schneider Electric">
+      <p>Schneider Electric</p>
+    </div>
+    <div class="partner">
+      <img src="pointp.png" alt="Point P">
+      <p>Point P</p>
+    </div>
+    <div class="partner">
+      <img src="schmidt.png" alt="Schmidt">
+      <p>Schmidt</p>
+    </div>
+    <div class="partner">
+      <img src="unikalo.png" alt="Unikalo">
+      <p>Unikalo</p>
+    </div>
+    <div class="partner">
+      <img src="wendel.png" alt="Wendel">
+      <p>Wendel</p>
+    </div>
   </section>
 
   <h2 class="section-title" id="avis">Témoignages clients</h2>
   <section class="testimonials">
-    <div class="testimonial"><p>"Service impeccable ! Les travaux ont été réalisés avec professionnalisme et dans les délais."</p><strong>- Marie T., Paris</strong></div>
-    <div class="testimonial"><p>"Équipe réactive et à l'écoute. Le résultat dépasse nos attentes. Merci Innov Eco Green !"</p><strong>- Julien R., Saint-Denis</strong></div>
-    <div class="testimonial"><p>"Professionnels à l'écoute, devis clair et sans surprise. Très satisfait !"</p><strong>- Amine R., Versailles</strong></div>
+    <div class="testimonial">
+      <p>"Service impeccable ! Les travaux ont été réalisés avec professionnalisme et dans les délais."</p>
+      <strong>- Marie T., Paris</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Équipe réactive et à l'écoute. Le résultat dépasse nos attentes. Merci Innov Eco Green !"</p>
+      <strong>- Julien R., Saint-Denis</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Professionnels à l'écoute, devis clair et sans surprise. Très satisfait !"</p>
+      <strong>- Amine R., Versailles</strong>
+    </div>
   </section>
 
   <h2 class="section-title" id="devis">Demande de devis</h2>
@@ -251,9 +478,184 @@
 
   <footer role="contentinfo">
     <nav aria-label="Liens de pied de page">
-      <a href="#services">Prestations</a> | <a href="#avis">Avis</a> | <a href="#partenaires">Partenaires</a> | <a href="#devis">Devis</a> | <a href="#contact">Contact</a>
+      <a href="#services">Prestations</a> | 
+      <a href="#avis">Avis</a> | 
+      <a href="#partenaires">Partenaires</a> | 
+      <a href="#devis">Devis</a> | 
+      <a href="#contact">Contact</a>
     </nav>
     <p>&copy; 2025 INNOV ECO GREEN. Tous droits réservés.</p>
   </footer>
+
+  <script>
+    // Scroll-triggered animations
+    function animateOnScroll() {
+      const testimonials = document.querySelectorAll('.testimonial');
+      const services = document.querySelectorAll('.service');
+      const partners = document.querySelectorAll('.partner');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Add scale and opacity animations for services and partners
+            if (entry.target.classList.contains('service') || entry.target.classList.contains('partner')) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'scale(1) translateY(0)';
+            }
+            
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Stagger animations
+      testimonials.forEach((testimonial, index) => {
+        testimonial.style.transitionDelay = `${index * 0.2}s`;
+        observer.observe(testimonial);
+      });
+
+      services.forEach((service, index) => {
+        // Remove opacity and scale transformations
+        service.style.opacity = '1';
+        service.style.transform = 'none';
+        
+        const img = service.querySelector('img');
+        img.style.opacity = '1';
+        
+        observer.observe(service);
+      });
+
+      partners.forEach((partner, index) => {
+        partner.style.transitionDelay = `${index * 0.1}s`;
+        partner.style.opacity = '0';
+        partner.style.transform = 'scale(0.9)';
+        observer.observe(partner);
+      });
+    }
+
+    // Form validation and submission
+    function setupFormValidation() {
+      const form = document.querySelector('.contact-form form');
+      
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = form.querySelector('input[name="name"]');
+        const email = form.querySelector('input[name="email"]');
+        const message = form.querySelector('textarea[name="message"]');
+        
+        // Basic validation
+        let isValid = true;
+        
+        // Name validation (at least 2 characters)
+        if (name.value.trim().length < 2) {
+          name.style.borderColor = 'red';
+          isValid = false;
+        } else {
+          name.style.borderColor = '#ccc';
+        }
+        
+        // Email validation with simple regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value)) {
+          email.style.borderColor = 'red';
+          isValid = false;
+        } else {
+          email.style.borderColor = '#ccc';
+        }
+        
+        // Message validation (at least 10 characters)
+        if (message.value.trim().length < 10) {
+          message.style.borderColor = 'red';
+          isValid = false;
+        } else {
+          message.style.borderColor = '#ccc';
+        }
+        
+        if (isValid) {
+          // In a real scenario, you'd send the form data to a server
+          const successModal = document.createElement('div');
+          successModal.innerHTML = `
+            <div style="
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              background: white;
+              padding: 2rem;
+              border-radius: 10px;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+              text-align: center;
+              z-index: 1000;
+            ">
+              <h2>Merci !</h2>
+              <p>Votre message a été envoyé avec succès.</p>
+              <button onclick="this.closest('div').remove()" style="
+                background: #000;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                margin-top: 1rem;
+              ">Fermer</button>
+            </div>
+          `;
+          document.body.appendChild(successModal);
+          form.reset();
+        }
+      });
+    }
+
+    // Smooth scrolling for navigation links
+    function setupSmoothScroll() {
+      const navLinks = document.querySelectorAll('nav[role="navigation"] a, footer nav a');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            targetElement.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    }
+
+    // Initialize all functions when DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Services count:', document.querySelectorAll('.service').length);
+      
+      // Ensure services are visible on page load
+      const services = document.querySelectorAll('.service');
+      services.forEach(service => {
+        service.style.opacity = '1';
+        service.style.transform = 'none';
+        
+        const img = service.querySelector('img');
+        if (img) {
+          img.style.opacity = '1';
+          img.style.display = 'block';
+        }
+      });
+
+      animateOnScroll();
+      setupFormValidation();
+      setupSmoothScroll();
+    });
+  </script>
 </body>
 </html>
