@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INNOV ECO GREEN – Rénovation & Dépannage Paris & Île-de-France</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green-dark:#1a4a2e;
+  --green:#2d7a4f;
+  --green-mid:#3a9e65;
+  --green-light:#4cba7a;
+  --green-pale:#e8f5ed;
+  --green-accent:#5ecb8a;
+  --lime:#a8d8a8;
+  --white:#fff;
+  --light:#f4f9f6;
+  --dark:#1c2b22;
+  --text:#3a4a3f;
+  --grey:#6b7a6e;
+  --border:#c8e0d0;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--text);font-size:15px;line-height:1.65;background:var(--white)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ══════════ PROMO BAR ══════════ */
+.promo-bar{
+  background:var(--green-dark);color:white;
+  text-align:center;padding:9px 20px;
+  font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:500;
+  letter-spacing:.3px;
+}
+.promo-bar span{color:var(--green-accent);font-weight:700}
+
+/* ══════════ NAV ══════════ */
+.top-nav{
+  background:white;border-bottom:2px solid var(--border);
+  position:sticky;top:0;z-index:1000;
+  box-shadow:0 3px 16px rgba(45,122,79,.1);
+}
+.nav-inner{
+  max-width:1240px;margin:0 auto;
+  display:flex;align-items:center;
+  padding:0 24px;height:68px;gap:20px;
+}
+.logo-wrap{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;font-size:17px;color:var(--green-dark);
+  white-space:nowrap;cursor:pointer;
+}
+.logo-leaf{font-size:22px}
+.logo-wrap span{color:var(--green-mid)}
+
+nav{display:flex;align-items:center;gap:2px;flex:1;flex-wrap:wrap}
+.nav-dd{position:relative}
+.nav-dd>a,.nav-link{
+  display:flex;align-items:center;gap:3px;
+  padding:8px 11px;border-radius:6px;
+  font-family:'Montserrat',sans-serif;
+  font-size:12.5px;font-weight:700;color:var(--dark);
+  transition:background .15s,color .15s;cursor:pointer;
+}
+.nav-dd>a:hover,.nav-link:hover,.nav-link.active{
+  background:var(--green-pale);color:var(--green-dark);
+}
+.nav-link.active{border-bottom:2px solid var(--green-mid)}
+.nav-dd>a::after{content:'▾';font-size:9px;color:#bbb;margin-left:2px}
+
+.dropdown{
+  position:absolute;top:calc(100% + 4px);left:0;
+  background:white;border:1px solid var(--border);
+  border-radius:10px;box-shadow:0 10px 40px rgba(45,122,79,.15);
+  min-width:230px;padding:10px 0;display:none;z-index:300;
+}
+.nav-dd:hover .dropdown{display:block}
+.dd-title{
+  padding:7px 18px 3px;
+  font-family:'Montserrat',sans-serif;font-size:10px;
+  text-transform:uppercase;letter-spacing:1px;color:#aaa;font-weight:700;
+}
+.dropdown a{
+  display:block;padding:8px 18px;font-size:13px;color:var(--text);
+  font-family:'Montserrat',sans-serif;font-weight:500;
+  transition:background .12s,color .12s;cursor:pointer;
+}
+.dropdown a:hover{background:var(--green-pale);color:var(--green-dark)}
+.dropdown hr{border:none;border-top:1px solid var(--border);margin:5px 0}
+
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto}
+.btn-nav{
+  display:inline-flex;align-items:center;
+  padding:8px 16px;border-radius:6px;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;
+  cursor:pointer;transition:all .2s;
+}
+.btn-outline-nav{border:2px solid var(--green-dark);color:var(--green-dark)}
+.btn-outline-nav:hover{background:var(--green-dark);color:white}
+.btn-fill-nav{background:var(--green-mid);color:white;border:2px solid var(--green-mid)}
+.btn-fill-nav:hover{background:var(--green-dark);border-color:var(--green-dark)}
+
+/* ══════════ PAGES ══════════ */
+.page{display:none}
+.page.active{display:block}
+
+/* ══════════ SHARED COMPONENTS ══════════ */
+.section-label{
+  font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;color:var(--green-mid);
+  margin-bottom:10px;
+}
+h2{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(20px,2.8vw,34px);
+  font-weight:800;color:var(--dark);line-height:1.2;margin-bottom:16px;
+}
+.section-desc{font-size:15px;color:var(--grey);line-height:1.75;max-width:640px}
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+section{padding:68px 0}
+
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--green-mid);color:white;
+  padding:13px 30px;border-radius:7px;
+  font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;
+  transition:background .2s,transform .2s;border:none;cursor:pointer;
+}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+.btn-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:white;color:var(--green-dark);
+  padding:13px 30px;border-radius:7px;
+  font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;
+  transition:background .2s,color .2s;
+}
+.btn-white:hover{background:var(--green-accent);color:white}
+.link-arr{
+  display:inline-flex;align-items:center;gap:5px;
+  color:var(--green-mid);font-family:'Montserrat',sans-serif;
+  font-weight:700;font-size:13px;transition:gap .2s;cursor:pointer;
+}
+.link-arr:hover{gap:9px;color:var(--green-dark)}
+.link-arr::after{content:'→'}
+
+/* WHY CARDS */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px}
+.why-card{text-align:center;padding:28px 16px}
+.why-icon{font-size:36px;margin-bottom:14px}
+.why-card h3{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--green-dark);margin-bottom:10px}
+.why-card p{font-size:13.5px;color:var(--grey);line-height:1.7}
+
+/* FAQ */
+.faq-wrap{max-width:780px}
+.faq-item{background:white;border-radius:8px;border:1px solid var(--border);margin-bottom:10px;overflow:hidden}
+.faq-q{
+  padding:18px 22px;display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;user-select:none;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:14.5px;color:var(--dark);
+}
+.faq-q::after{content:'+';font-size:22px;color:var(--green-mid);font-weight:300;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;font-size:14px;color:#555;line-height:1.75;padding:0 22px}
+.faq-item.open .faq-a{max-height:300px;padding:0 22px 18px}
+
+/* PARTNERS */
+.partners-row{display:flex;gap:32px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.partner-logo{height:50px;width:auto;object-fit:contain;filter:grayscale(.3);opacity:.8;transition:opacity .2s,filter .2s}
+.partner-logo:hover{opacity:1;filter:none}
+
+/* CTA BAND */
+.cta-band{
+  background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 100%);
+  padding:64px 24px;
+}
+.cta-band-inner{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:48px;position:relative}
+.cta-band-text{flex:1;color:white}
+.cta-band-text .section-label{color:var(--green-accent)}
+.cta-band-text h2{color:white;font-size:clamp(20px,2.8vw,32px)}
+.cta-band-text p{color:rgba(255,255,255,.8);font-size:15px;line-height:1.7;max-width:480px;margin-bottom:26px}
+.cta-worker{position:absolute;right:0;bottom:-64px;width:155px;opacity:.45}
+
+/* OTHER EXPERTISES */
+.xp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:36px}
+.xp-card{
+  border:1.5px solid var(--border);border-radius:10px;padding:26px 20px;
+  background:white;transition:border-color .2s,box-shadow .2s;cursor:pointer;
+}
+.xp-card:hover{border-color:var(--green-mid);box-shadow:0 6px 28px rgba(45,122,79,.13)}
+.xp-icon{width:42px;height:42px;margin-bottom:14px}
+.xp-card h3{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--green-dark);margin-bottom:10px}
+.xp-card p{font-size:13px;color:var(--grey);margin-bottom:18px;line-height:1.7}
+
+/* SERVICE CARDS */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:36px}
+.svc-card{
+  background:white;border-radius:12px;overflow:hidden;
+  box-shadow:0 3px 16px rgba(45,122,79,.08);
+  transition:transform .2s,box-shadow .2s;
+  border-top:3px solid var(--green-mid);
+}
+.svc-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(45,122,79,.15)}
+.svc-card img{width:100%;height:170px;object-fit:cover}
+.svc-card-body{padding:20px}
+.svc-card-body h3{font-family:'Montserrat',sans-serif;font-size:14.5px;font-weight:800;color:var(--green-dark);margin-bottom:9px}
+.svc-card-body p{font-size:13px;color:var(--grey);line-height:1.7}
+
+/* FOOTER */
+footer{background:var(--green-dark);color:rgba(255,255,255,.72);padding:56px 24px 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-logo-txt{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:white;margin-bottom:12px}
+.footer-logo-txt span{color:var(--green-accent)}
+.footer-desc{font-size:13px;line-height:1.75;max-width:270px;margin-bottom:16px}
+footer h4{font-family:'Montserrat',sans-serif;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:white;margin-bottom:14px}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+footer ul li a{font-size:13px;color:rgba(255,255,255,.6);transition:color .2s;cursor:pointer}
+footer ul li a:hover{color:var(--green-accent)}
+.footer-phone{color:var(--green-accent);font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;margin:8px 0 4px}
+.footer-email{color:rgba(255,255,255,.65);font-size:13px}
+.footer-addr{font-size:12.5px;color:rgba(255,255,255,.5);margin-top:10px;line-height:1.6}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:20px;font-size:12px;color:rgba(255,255,255,.32);flex-wrap:wrap;gap:8px}
+
+/* COOKIE */
+.cookie-bar{
+  position:fixed;bottom:0;left:0;right:0;background:white;
+  border-top:2px solid var(--border);padding:14px 28px;z-index:9999;
+  display:flex;align-items:center;gap:18px;box-shadow:0 -4px 20px rgba(0,0,0,.08);flex-wrap:wrap;
+}
+.cookie-bar p{font-size:13px;color:var(--grey);flex:1;min-width:180px}
+.cookie-btn{background:var(--green-mid);color:white;padding:9px 20px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;cursor:pointer;border:none}
+.cookie-link{font-size:12px;color:var(--green-mid);cursor:pointer;white-space:nowrap}
+
+/* ══════════ PAGE: ACCUEIL ══════════ */
+.hero-home{
+  background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 60%,#3da866 100%);
+  padding:80px 24px 0;overflow:hidden;
+}
+.hero-home-inner{max-width:1240px;margin:0 auto;display:flex;align-items:flex-end;gap:48px}
+.hero-home-left{flex:1;padding-bottom:56px}
+.hero-badge{
+  display:inline-block;background:rgba(94,203,138,.18);color:var(--green-accent);
+  border:1px solid rgba(94,203,138,.35);border-radius:20px;padding:4px 14px;
+  font-size:11px;font-weight:700;font-family:'Montserrat',sans-serif;
+  letter-spacing:.8px;text-transform:uppercase;margin-bottom:16px;
+}
+.hero-home-left h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(28px,4vw,50px);font-weight:900;
+  color:white;line-height:1.1;margin-bottom:18px;
+}
+.hero-home-left p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.7;max-width:500px;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-phone{display:flex;align-items:center;gap:7px;color:white;font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px}
+.hero-checks{margin-top:24px;display:flex;gap:18px;flex-wrap:wrap}
+.hero-check{color:rgba(255,255,255,.85);font-size:13px;display:flex;align-items:center;gap:5px;font-weight:600;font-family:'Montserrat',sans-serif}
+.hero-check::before{content:'✓';color:var(--green-accent);font-weight:900}
+.hero-home-right{flex:0 0 400px;align-self:flex-end}
+.hero-home-right img{width:100%;border-radius:14px 14px 0 0;box-shadow:0 -12px 50px rgba(0,0,0,.28)}
+
+/* EXPERTISES HOME */
+.home-xp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.home-xp-card{
+  background:white;border-radius:12px;padding:34px 30px;
+  border-left:4px solid var(--green-mid);
+  box-shadow:0 4px 20px rgba(45,122,79,.08);
+  transition:transform .2s,box-shadow .2s;
+}
+.home-xp-card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(45,122,79,.14)}
+.home-xp-icon{font-size:34px;margin-bottom:14px}
+.home-xp-card h3{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:var(--green-dark);margin-bottom:12px}
+.home-xp-card p{font-size:14px;color:var(--grey);line-height:1.75;margin-bottom:16px}
+
+/* WHO GRID */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.who-card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(45,122,79,.08);transition:transform .2s}
+.who-card:hover{transform:translateY(-4px)}
+.who-card img{width:100%;height:200px;object-fit:cover}
+.who-card-body{padding:22px}
+.who-card-body h3{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--green-dark);margin-bottom:9px}
+.who-card-body p{font-size:13.5px;color:var(--grey);margin-bottom:14px}
+
+/* CERTIF */
+.certif-row{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.certif-logo{height:68px;width:auto;object-fit:contain;filter:grayscale(.15);opacity:.85;transition:opacity .2s}
+.certif-logo:hover{opacity:1;filter:none}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:white;border-radius:12px;padding:28px;box-shadow:0 4px 16px rgba(45,122,79,.08);position:relative}
+.testi-card::before{content:'"';position:absolute;top:12px;left:18px;font-size:60px;color:var(--green-light);opacity:.25;font-family:Georgia,serif;line-height:1}
+.testi-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:var(--green-dark);margin-bottom:10px}
+.testi-card p{font-size:13.5px;color:#555;line-height:1.7;margin-bottom:14px}
+.testi-author{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--dark)}
+.rating-block{display:flex;align-items:center;gap:18px;margin-bottom:36px}
+.rating-box{background:white;border-radius:10px;padding:16px 22px;border:2px solid var(--border);text-align:center;box-shadow:0 2px 10px rgba(45,122,79,.07)}
+.rating-score{font-family:'Montserrat',sans-serif;font-size:30px;font-weight:900;color:var(--green-dark)}
+.stars{color:#4cba7a;font-size:17px;letter-spacing:2px}
+.rating-count{font-size:11px;color:#888}
+
+/* ══════════ PAGE: HERO INTERNE ══════════ */
+.page-hero{
+  background:linear-gradient(135deg,var(--green-dark) 0%,var(--green-mid) 60%,#3da866 100%);
+  padding:64px 24px 0;overflow:hidden;
+}
+.page-hero-inner{max-width:1240px;margin:0 auto;display:flex;align-items:flex-end;gap:48px}
+.page-hero-left{flex:1;padding-bottom:48px}
+.page-hero-left h1{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:900;color:white;line-height:1.15;margin-bottom:18px}
+.page-hero-left p{font-size:15.5px;color:rgba(255,255,255,.82);line-height:1.7;max-width:520px;margin-bottom:30px}
+.page-hero-right{flex:0 0 420px;align-self:flex-end}
+.page-hero-right img{width:100%;border-radius:14px 14px 0 0;box-shadow:0 -10px 50px rgba(0,0,0,.28)}
+
+/* INTRO SPLIT */
+.intro-split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:60px 0 50px}
+.intro-img-wrap{border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(45,122,79,.1)}
+.intro-img-wrap img{width:100%;height:340px;object-fit:cover}
+.av-list{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.av-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;font-family:'Montserrat',sans-serif;color:var(--dark)}
+.av-dot{width:30px;height:30px;border-radius:50%;background:var(--green-mid);color:white;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+
+/* ══════════ RESPONSIVE ══════════ */
+@media(max-width:1100px){
+  .svc-grid,.why-grid,.xp-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:860px){
+  .hero-home-inner,.page-hero-inner,.intro-split,.cta-band-inner{flex-direction:column;gap:24px}
+  .hero-home-right,.page-hero-right{display:none}
+  .who-grid,.testi-grid{grid-template-columns:1fr 1fr}
+  .home-xp-grid{grid-template-columns:1fr}
+  .cta-worker{display:none}
+}
+@media(max-width:600px){
+  .svc-grid,.why-grid,.xp-grid,.who-grid,.testi-grid,.footer-grid{grid-template-columns:1fr}
+  nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="top-nav">
+  <div class="nav-inner">
+    <div class="logo-wrap" onclick="showPage('accueil')">
+      <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABWAFQDASIAAhEBAxEB/8QAHAABAQEAAwEBAQAAAAAAAAAAAAcGAgQFAQgD/8QARxAAAAUCAgQJCgIFDQAAAAAAAAECAwQFBgcREhMhMQhBUVVhdYGU0RQVFhciIzdxkbJToRg2OLPDJTIzNUJDVldidIKT8P/EABoBAAIDAQEAAAAAAAAAAAAAAAADAQIEBQb/xAAtEQACAgECBAMHBQAAAAAAAAABAgADEQQxEiFRYTJxoRNBQnKBkcEiM2Kx8f/aAAwDAQACEQMRAD8A8K0rarN1VNVNocZMiUlo3TQpwkeyRkRnmfzIassFsR+ZGe+N+I9bgsfEaWZbD81u7f8AmgYWp3PchVOWRV+pkRSHCIvKVbPaPpHOCoFBaeUSqhaRZZnmTtj3TSepXEfmRnvjfiHqVxH5kZ7434jJ+k9y8/1PvKvEPSe5ef6n3lXiDNXeVzo+jek1nqVxH5kZ7434h6lcR+ZGe+N+IyfpPcvP9T7yrxD0nuXn+p95V4gzV3hnR9G9JrPUriPzIz3xvxD1K4j8yM98b8Rk/Se5ef6n3lXiHpPcvP8AU+8q8QZq7wzo+jek1nqWxH5kZ7434jxbuw+uy06c3UK9Tm40dx0mUqS+hZmoyM8siPkIx5vpPcv+IKp3lXiKJdkyXO4N9vyJ0p6U8dXWRuOrNSjItZkWZiQtbA4zGLXprVbgByATzxJIAAEznSs8Fj4izOq3fvQJfVP61mf7hz7jFQ4LHxFmdVu/egTKay9Iq81DDLrykvOqMm0GoySSjzPZxBp/bE3OCdKgHU/idMAAKmGAAAQgAAEIFUr/AOzPb3XC/wCIJWKpX/2Z7e64X/EDavi8pt0e1nyn8SVgABUxSscFn4iTOq3fvQM3ZNy3FbF0VmTbcFuY+6l5LyFsG7oNkszNeRbsvpyjS8Fj4izOq3fvQOWAX67Xd1TL/eENCDIXHUzr6cFkqAOOZkmcWp1xbqjI1LUajyLIszPMx/SHFkzJCY8OM9IeVubaQalH2EPlKiSJ8qJBioNb8haGm08qlGREKzddzN4ZNnZlmJaaqbSU+daspslOLdMiM0oz3EWfZ89oWqA5JPKY6qAwZ7DhR6noJOana1zUyL5VUbfqcRjZ7x2Mokl25Dxxs6PilfVOl6469IntqP3keZk624XGRkfL0D08VqNRpVCpF+2zFRDp9UzalxEH7MeSW8iLiI8j+nSAopGVO0lqKnQvSTy3B/uTk9m8etS7ZuOqxzkU2g1KYyRZ6xmOpScvnkNlhRQqREolTxAueMmVTKUerixFbpMg8siMuMizLtPoHl1vFG96nMN5qtP01gj91FhGTbbSeJJEW/LlMARQMtBaK0QPcTz2A385kZkaTDfVHmRnozyd7bqDQouwxULjbca4NNvJdbW2o6us8lJMjyMnMj2jp2reRXS6za1/KKoR5S0txKmtJeUw3TP2T0v7STPIjIxTuFUgm8O6Y2W5FRQkuxtZBqIOFmB902UUViqyxGyMEd/rPzOAAM048rPBY+Iszqt370DlgF+u13dUy/3hDjwWPiLM6rd+9A+4CKSm9ru0lEn+SZe88v7whpr2XznZ0nhp+YzJYIaPrRtrS3eVF9dBWQ198XtbUe86wxOw2pUuU1McQ5IeeWSnTI8tMy5T3iUUmXIp0uJPirNuRGWh1tXIpJkZCuXdQYOKSU3ZZr7B1xbSfOlIccJDmmRZaaM9+7t2cYitjwkLvKaaxzUyVeIHOOong+ndn/5WUT/uWOteGILFas5q1qbbECiwESik5MOKV7W3dnuzzHRjYb35ImlERa1RQ4Z5GpxvRQnpNR7Mh8vq36LbUaHTGqr5wr5GaqhqFEqMwWWxsj3msuMxBazhOdpVrdWa2L8h3AH0HKaWsm/+jTQCbVmz54e1xEX+pzRz/wDcgl4o2FVeo79Eqdg3O95PTKsolxpR7o0gstFR8hGZF9OkdCvYVXxSpOrbo7tUjq/opUH3rbhcR7NpdohlLAERd1TXVpZWM4AB7ETFNZ61vLfppy+o/SfChJZYZUfWHmvy5rSPp1S8xNLbs5dnus3TfbRQkRlkuBTFLI35j5H7JGks9FBHtMzFP4VajXh3TFmRkaqihWXJm2sMrQrW2Zr01DVaa3i5Ejb7z8zAADLOJKxwWfiLM6rd+9AmVSWtFWmm2taM33SPRUZZlpHsGwwPuyk2deD1UrRSDjOQlsFqW9NWkakmWzPdsMevIPAp+Q6+ty7iU44pZ6JEREZnnkQeBxIBnE6ddYt06qHAIJ3OJLRzYeejvJfjuuMuoPNK21GlRfIyFM1eA/4t4fkGrwH/ABbw/IR7H+QlRocHItX7zETLpueZF8ll3FVX2MstWuUs05fUeOKfq8B/xbw/INXgP+LeH5CTWTuw+8s+kZ/Fap+sndJplQq85MClw3pkpaVKSy0nSUoiLM8i49g78et3Xb5rgMVSsUvR9lTGtW3l0aJ7hu4EjBGnzWZsKXebEhlWm24gyI0n8xv2sY8O9BtEs6vOU3/NckwELWXaYstQHxYMdTo61GfbAN2P+SUYcWjWbxuRupVhclukxFk/PnzDPIkp26JGreZ5ZdG8UDHa4ot04SQKxBIyiLrSm2TMsjUhCVpI+3IcbzxCw0uuKmHVapdpREnmUeM2TTZ/Mi3jJ4iXTZMnDam2laPnM0RJvlBnMbyPIyVntz35qF/0qpAMeRVTS6q4OQeeeZMmAAAxzz8AAAhAAAIQAACEAAAhAAAIQAACE//Z" alt="IEG" style="height:42px;width:auto;">
+      INNOV <span>ECO GREEN</span>
+    </div>
+
+    <nav>
+      <div class="nav-dd">
+        <a>Rénovation intérieure</a>
+        <div class="dropdown">
+          <div class="dd-title">Rénovation complète</div>
+          <a onclick="showPage('renovation-appartement')">Rénover un appartement</a>
+          <a onclick="showPage('renovation-maison')">Rénover une maison</a>
+          <a onclick="showPage('renovation-entreprise')">Rénovation locaux entreprise</a>
+          <hr>
+          <div class="dd-title">Rénover une pièce</div>
+          <a onclick="showPage('renovation-sdb')">Rénover une salle de bain</a>
+          <a onclick="showPage('renovation-interieur')">Rénovation salon / chambre</a>
+          <hr>
+          <a onclick="showPage('renovation-energetique')">🌱 Rénovation énergétique</a>
+        </div>
+      </div>
+
+      <div class="nav-dd">
+        <a>Nous accompagnons</a>
+        <div class="dropdown">
+          <a onclick="showPage('accueil')">Les particuliers</a>
+          <a onclick="showPage('accueil')">Les entreprises</a>
+          <a onclick="showPage('accueil')">Les professionnels</a>
+        </div>
+      </div>
+
+      <div class="nav-dd">
+        <a>Nos prestations</a>
+        <div class="dropdown">
+          <div class="dd-title">Finitions & intérieur</div>
+          <a onclick="showPage('revetements')">Revêtements intérieurs</a>
+          <a onclick="showPage('revetements')">Peinture</a>
+          <a onclick="showPage('revetements')">Revêtement sol</a>
+          <a onclick="showPage('revetements')">Ravalement</a>
+          <a onclick="showPage('isolation')">Isolation</a>
+          <hr>
+          <div class="dd-title">Menuiserie & étanchéité</div>
+          <a onclick="showPage('menuiserie')">Menuiserie</a>
+          <a onclick="showPage('revetements')">Étanchéités</a>
+          <hr>
+          <div class="dd-title">Équipements techniques</div>
+          <a onclick="showPage('plomberie')" style="font-weight:700;color:var(--green-dark)">🔧 Plomberie</a>
+          <a onclick="showPage('chauffage')" style="font-weight:700;color:var(--green-dark)">🔥 Chauffage</a>
+          <a onclick="showPage('electricite')" style="font-weight:700;color:var(--green-dark)">⚡ Électricité</a>
+          <a onclick="showPage('climatisation')" style="font-weight:700;color:var(--green-dark)">❄️ Climatisation</a>
+          <a onclick="showPage('ventilation')" style="font-weight:700;color:var(--green-dark)">💨 Ventilation</a>
+        </div>
+      </div>
+
+      <span class="nav-link" id="nl-accueil" onclick="showPage('accueil')">Accueil</span>
+      <span class="nav-link" id="nl-plomberie" onclick="showPage('plomberie')">Plomberie</span>
+      <span class="nav-link" id="nl-chauffage" onclick="showPage('chauffage')">🔥 Chauffage</span>
+      <span class="nav-link" id="nl-electricite" onclick="showPage('electricite')">Électricité</span>
+      <span class="nav-link" id="nl-climatisation" onclick="showPage('climatisation')">❄️ Climatisation</span>
+      <span class="nav-link" id="nl-contact" onclick="showPage('contact')">Contact</span>
+    </nav>
+
+    <div class="nav-right">
+      <span class="btn-nav btn-fill-nav" onclick="showPage('contact')">Devis Gratuit</span>
+    </div>
+  </div>
+</div>
+
+<!-- ████████████████████ PAGE: ACCUEIL ████████████████████ -->
+<div id="page-accueil" class="page active">
+
+  <div class="hero-home">
+    <div class="hero-home-inner">
+      <div class="hero-home-left">
+        <div class="hero-badge">🌿 INNOV ECO GREEN HABITAT</div>
+        <h1><strong>Rénovation Paris & île-de-France : Expert de confiance</strong></h1>
+        <p>Votre projet de rénovation mérite un accompagnement professionnel et écologique. Obtenez un devis gratuit en 24h avec des artisans qualifiés engagés pour l'environnement.</p>
+        <div class="hero-ctas">
+          <span class="btn-primary" style="font-size:15px;padding:14px 30px;" onclick="showPage('contact')">🌱 Devis Gratuit 24h</span>
+          <a href="tel:0752892815" class="hero-phone">📞 07 52 89 28 15</a>
+        </div>
+        <div class="hero-checks">
+          <div class="hero-check">Réponse en 24h</div>
+          <div class="hero-check">Devis 100% gratuit</div>
+          <div class="hero-check">Artisans qualifiés</div>
+          <div class="hero-check">Éco-responsable</div>
+        </div>
+      </div>
+      <div class="hero-home-right">
+        <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62b963d5464a2e6cb8a0b5ce_illu-header-home.jpg" alt="INNOV ECO GREEN rénovation">
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERTISES -->
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">Nos domaines d'expertise</div>
+      <h2>Découvrez nos expertises pour concrétiser vos projets</h2>
+      <p class="section-desc">Qualité, écoute et engagement écologique : nous transformons vos projets en réalité durable.</p>
+      <div class="home-xp-grid" style="margin-top:40px">
+        <div class="home-xp-card">
+          <div class="home-xp-icon">🏠</div>
+          <h3>Rénovation intérieure</h3>
+          <p><strong>Transformez votre espace de vie</strong><br>Souhaitez-vous réaménager une pièce ou effectuer une rénovation complète ? <strong>INNOV ECO GREEN</strong> est là pour vous aider à réaliser vos envies avec des matériaux durables et des finitions haut de gamme.</p>
+          <p style="margin-top:12px"><strong>Un accompagnement personnalisé</strong><br>Chaque projet est unique. Nous offrons un accompagnement sur-mesure pour transformer votre intérieur en un espace qui vous ressemble, tout en respectant l'environnement.</p>
+          <span class="link-arr" style="margin-top:16px;display:inline-flex" onclick="showPage('renovation-interieur')">Découvrir notre expertise</span>
+        </div>
+        <div class="home-xp-card">
+          <div class="home-xp-icon">⚡</div>
+          <h3>Rénovation énergétique</h3>
+          <p><strong>Une nécessité pour l'avenir</strong><br>La rénovation énergétique est au cœur de notre engagement. Elle permet de <strong>réduire votre consommation d'énergie</strong> et de contribuer à la protection de l'environnement. <strong>INNOV ECO GREEN</strong> vous accompagne dans chaque étape.</p>
+          <p style="margin-top:12px"><strong>Des aides financières disponibles</strong><br>Notre équipe vous accompagne dans le montage de votre dossier pour maximiser vos chances d'obtenir des subventions et crédits d'impôt.</p>
+          <span class="link-arr" style="margin-top:16px;display:inline-flex" onclick="showPage('renovation-energetique')">Découvrir notre expertise</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section style="background:white;padding:56px 0">
+    <div class="container" style="text-align:center">
+      <div class="section-label">Nos certifications</div>
+      <h2>Notre savoir-faire certifié</h2>
+      <div class="certif-row">
+        <img class="certif-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627a40fc9135c8858801c717_CAPEB.png" alt="CAPEB">
+        <img class="certif-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/66bb173f8a9a4a087c4bed2f_Capture_d_e%CC%81cran_2024-08-13_a%CC%80_10.19.32_AM-removebg-preview.png" alt="BPCE IBRO">
+        <img class="certif-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/66ff21025ef3f8520a0c1bcc_ss4-amiante-removebg-preview.png" alt="SS4 Amiante">
+      </div>
+    </div>
+  </section>
+
+  <!-- QUI ON ACCOMPAGNE -->
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">Qui accompagnons-nous ?</div>
+      <h2>INNOV ECO GREEN accompagne tous vos projets</h2>
+      <p class="section-desc">Une approche personnalisée pour chaque client, particuliers, entreprises et professionnels.</p>
+      <div class="who-grid" style="margin-top:36px">
+        <div class="who-card">
+          <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62bac1e8a5a9f217316140e9_kitchen-in-reno.jpg" alt="Les particuliers">
+          <div class="who-card-body">
+            <h3>Les particuliers</h3>
+            <p>Pour rénover vos intérieurs avec des solutions éco-responsables adaptées à votre budget et vos goûts.</p>
+            <span class="link-arr">En savoir plus</span>
+          </div>
+        </div>
+        <div class="who-card">
+          <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62bad03867ba196ecbbaeac9_comfort-office.jpg" alt="Les entreprises">
+          <div class="who-card-body">
+            <h3>Les entreprises</h3>
+            <p>Pour rénover vos locaux professionnels en respectant les délais et les normes en vigueur.</p>
+            <span class="link-arr" onclick="showPage('renovation-entreprise')">En savoir plus</span>
+          </div>
+        </div>
+        <div class="who-card">
+          <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62bad31caf813e3926d6fe50_real-estate-agent.jpg" alt="Les professionnels">
+          <div class="who-card-body">
+            <h3>Les professionnels</h3>
+            <p>Agences immobilières, architectes, syndics : notre flexibilité et réactivité sont vos meilleurs atouts.</p>
+            <span class="link-arr">En savoir plus</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Envie de vous lancer ?</div>
+        <h2>Contactez INNOV ECO GREEN !</h2>
+        <p>Obtenez une estimation gratuite de vos travaux en 24h. Artisans qualifiés, finitions haut de gamme et engagement éco-responsable.</p>
+        <span class="btn-white" onclick="showPage('contact')">Obtenir mon devis gratuit</span>
+      </div>
+      <img class="cta-worker" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627a9b7611627cc830f03ef0_personnage%20ouvriers%20batiments%201.svg" alt="">
+    </div>
+  </div>
+
+  <!-- NOS PRESTATIONS -->
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Nos prestations</div>
+      <h2>Les prestations de INNOV ECO GREEN</h2>
+      <p class="section-desc">Nous vous accompagnons à chaque étape de votre projet, du début jusqu'à la fin.</p>
+      <div class="xp-grid" style="margin-top:36px">
+        <div class="xp-card" onclick="showPage('revetements')">
+          <img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf3e9623f8a09c2d99d_cement.svg" alt="">
+          <h3>Revêtement d'intérieur</h3>
+          <p>Large gamme de revêtements : papier peint, peintures, sols souples et sols durs (carrelage, parquet).</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+        <div class="xp-card" onclick="showPage('plomberie')">
+          <img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf482aaa80a289f204c_water-pipe.svg" alt="">
+          <h3>Plomberie</h3>
+          <p>Douche italienne, baignoire, WC suspendu, dépannage fuite, curage canalisation. Certifiés PMR.</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+        <div class="xp-card" onclick="showPage('electricite')">
+          <img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf4dac92d236d7cf3cc_electric-plug.svg" alt="">
+          <h3>Électricité</h3>
+          <p>Installation apparente, semi-encastrée ou encastrée. Mise en conformité aux normes en vigueur.</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+        <div class="xp-card" onclick="showPage('menuiserie')">
+          <img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf46c11753a6e3efaea_hand-saw.svg" alt="">
+          <h3>Menuiserie</h3>
+          <p>Cuisine sur-mesure, fenêtres, portes, volets, escaliers, dressings et aménagement de combles.</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+        <div class="xp-card" onclick="showPage('isolation')">
+          <img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf5e3e3d20172bcc6d5_insulating.svg" alt="">
+          <h3>Isolation</h3>
+          <p>Isolation phonique, thermique et extérieure pour un confort optimal et des économies d'énergie.</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+        <div class="xp-card" onclick="showPage('renovation-energetique')">
+          <div style="font-size:38px;margin-bottom:14px">🌱</div>
+          <h3>Rénovation énergétique</h3>
+          <p>Pompes à chaleur, chauffe-eau thermodynamique, isolation, fenêtres. Aides de l'État disponibles.</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+        <div class="xp-card" onclick="showPage('plomberie')">
+          <div style="font-size:38px;margin-bottom:14px">🔥</div>
+          <h3>Chauffage & Ventilation</h3>
+          <p>Installation de radiateurs, chaudières à gaz, ballons thermodynamiques et VMC.</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+        <div class="xp-card" onclick="showPage('plomberie')">
+          <div style="font-size:38px;margin-bottom:14px">🏗️</div>
+          <h3>Chaufferie collective</h3>
+          <p>Installation et rénovation complète de chaufferies collectives pour immeubles et copropriétés.</p>
+          <span class="link-arr">En savoir plus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section style="background:var(--light)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:0">
+        <div class="section-label">Pourquoi nous choisir</div>
+        <h2>Faire le choix de INNOV ECO GREEN</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">⚡</div><h3>Réactivité</h3><p>Nos équipes de professionnels dynamiques assurent la réalisation de vos travaux dans les meilleurs délais. Intervention 7j/7.</p></div>
+        <div class="why-card"><div class="why-icon">💰</div><h3>Rapport qualité/prix</h3><p>Nous vous offrons les meilleures prestations au meilleur prix. Devis détaillés, sans frais cachés, ni surprises.</p></div>
+        <div class="why-card"><div class="why-icon">📞</div><h3>Disponibilité</h3><p>Toutes les demandes sont traitées dans les 24h. Nous répondons rapidement aux urgences, week-end inclus.</p></div>
+        <div class="why-card"><div class="why-icon">🛡️</div><h3>Garanties</h3><p>Assurance décennale et civile. Votre projet réalisé correctement, dans les délais, sans coûts cachés.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Avis clients</div>
+      <h2>Ils sont passés par INNOV ECO GREEN</h2>
+      <div class="rating-block">
+        <div class="rating-box"><div class="rating-score">4,9/5</div><div class="stars">★★★★★</div><div class="rating-count">15 avis Google</div></div>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card"><div class="testi-title">"Un suivi irréprochable"</div><p>Nous avons contacté INNOV ECO GREEN pour la rénovation de notre appartement à Asnières. Toute la planification s'est déroulée de façon fluide, même à distance pendant nos vacances. Équipe toujours à l'écoute.</p><div class="testi-author">Kevin DUPOND</div></div>
+        <div class="testi-card"><div class="testi-title">"Des délais tenus"</div><p>Contacté INNOV ECO GREEN en urgence pour des travaux de peinture avant remise des clés. L'intervention a été réalisée dès le lendemain, travaux terminés en 3 jours. Caution récupérée. Merci !</p><div class="testi-author">Alyan Ali</div></div>
+        <div class="testi-card"><div class="testi-title">"Des conseils pertinents"</div><p>Problème de moisissure dans ma chambre en télétravail. INNOV ECO GREEN a rapidement effectué un diagnostic et m'a orienté vers les bonnes solutions. Très professionnels et réactifs.</p><div class="testi-author">Client satisfait</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2>Questions fréquentes</h2>
+      <div class="faq-wrap">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">Quelle est votre zone d'intervention ?</div><div class="faq-a">Nous intervenons dans les départements 75, 77, 78, 91, 92, 93, 94 et 95. INNOV ECO GREEN est à vos côtés pour réaliser vos projets à Paris et en Île-de-France.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Le devis est-il gratuit ?</div><div class="faq-a">Tous nos devis sont gratuits. En général, nous envoyons nos devis sous 24 heures si aucune visite préalable n'est nécessaire.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Le devis est-il modifiable en cours de travaux ?</div><div class="faq-a">Oui, le devis peut être modifié en accord avec le responsable client. Tout coût supplémentaire ou changement sera indiqué au préalable, sans surprise.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quelles aides pour la rénovation énergétique ?</div><div class="faq-a">Plusieurs aides sont disponibles : prime Coup de pouce, TVA à 5,5%, exonération taxe foncière, subventions de l'État. Notre équipe vous accompagne dans le montage de dossier.</div></div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /accueil -->
+
+<!-- ████████████████████ PAGE: PLOMBERIE ████████████████████ -->
+<div id="page-plomberie" class="page">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🔧 INNOV ECO GREEN</div>
+        <h1>Plombier Paris & Île de France</h1>
+        <p>Des petites fuites de votre évier à une installation complète, <strong style="color:white">INNOV ECO GREEN</strong> assure toutes interventions plomberie à Paris. Disponible <strong style="color:white">7j/7</strong>, devis gratuit sous 24h.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+      <div class="page-hero-right">
+        <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976cab1ad999edeb4f63e2_plombier-paris.jpg" alt="Plombier Paris">
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="intro-split">
+        <div class="intro-img-wrap"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c0f7f7cff9376cd58f5_plomberie-.jpg" alt="Plomberie INNOV ECO GREEN"></div>
+        <div>
+          <h2>Quand faire appel à un plombier ?</h2>
+          <p><strong>INNOV ECO GREEN</strong> résout tous vos problèmes de plomberie : fuites, robinets défectueux, rénovation et remplacement d'équipements. Délais de réponse rapides, devis gratuits en ligne.</p>
+          <p style="margin-top:12px">Nous sommes disponibles <strong>7j/7</strong>, week-end inclus. La satisfaction de nos clients est notre première préoccupation.</p>
+          <div class="av-list">
+            <div class="av-item"><div class="av-dot">✓</div>Devis gratuit sous 24h</div>
+            <div class="av-item"><div class="av-dot">📞</div>Disponible 7j/7 – 07 52 89 28 15</div>
+            <div class="av-item"><div class="av-dot">🏅</div>Artisans qualifiés, finitions haut de gamme</div>
+            <div class="av-item"><div class="av-dot">🛡</div>Assurance décennale et civile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">Nos expertises plomberie</div>
+      <h2>La plomberie selon votre besoin</h2>
+      <p class="section-desc">Retrouvez toutes nos expertises et prestations dans le domaine de la plomberie</p>
+      <div class="svc-grid">
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c1512d4f77463561a33_plomberie-ge%CC%81ne%CC%81ral.jpg" alt="Plomberie générale"><div class="svc-card-body"><h3>Plomberie générale</h3><p>Douche italienne, déplacement lave-vaisselle, rénovation complète. Vérification raccordements cuivre, laiton, PVC.</p></div></div>
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c19ac3067716bb4568f_fuitz.jpg" alt="Réparation fuite"><div class="svc-card-body"><h3>Réparation fuite</h3><p>Diagnostic rapide et réparation de vos problèmes de tuyauterie et de siphon. Intervention urgente 7j/7.</p></div></div>
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c1cac306786acb45690_boucher.jpg" alt="Débouchage évier"><div class="svc-card-body"><h3>Débouchage d'évier</h3><p>Débouchage rapide et à moindre coût de vos éviers, baignoires et douches, à n'importe quel moment.</p></div></div>
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c20811fd05c56054993_toilettes.jpg" alt="Aménagement sanitaire"><div class="svc-card-body"><h3>Aménagement sanitaire</h3><p>Double vasque, douche sécurisée, installation PMR. Experts salle de bains et WC selon vos besoins.</p></div></div>
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c268f6b8dbe0e51db4c_canalisation.jpg" alt="Curage canalisation"><div class="svc-card-body"><h3>Curage & débouchage canalisation</h3><p>Eau usée, raccords défectueux, évacuation non conforme. Nos plombiers s'occupent de tout.</p></div></div>
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62b97962f3be976fad41c8a3_chauffage-.jpg" alt="Réparation chauffage"><div class="svc-card-body"><h3>Réparation de chauffage</h3><p>Chauffage électrique ou gaz, radiateurs, chaudières. Installation et déplacement de vos équipements.</p></div></div>
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c30cc47076d746563c3_chauffage-entretien.jpg" alt="Entretien chauffage"><div class="svc-card-body"><h3>Dépannage & entretien chauffage</h3><p>Remise à la norme de votre plomberie, PVC ou cuivre. Conseils et accompagnement personnalisé.</p></div></div>
+        <div class="svc-card"><img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62b97c12d59ba841d66e5e93_air-conditioner.jpg" alt="Climatisation"><div class="svc-card-body"><h3>Installation de climatisation</h3><p>Monobloc, split, gaz ou solaire. Nos experts vous accompagnent dans le choix et l'installation.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Contactez nous</div>
+        <h2>Besoin d'un plombier à Paris ou en Île de France ?</h2>
+        <p>Contactez nos équipes <strong>INNOV ECO GREEN</strong> pour poser vos questions. Devis gratuit 7j/7.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+      <img class="cta-worker" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627a9b7611627cc830f03ef0_personnage%20ouvriers%20batiments%201.svg" alt="">
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Pourquoi nous choisir</div>
+      <h2>Pourquoi choisir INNOV ECO GREEN ?</h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">⚡</div><h3>Réactivité</h3><p>Professionnels dynamiques qui s'assurent que votre rénovation démarre du bon pied, du début à la fin.</p></div>
+        <div class="why-card"><div class="why-icon">💰</div><h3>Rapport qualité/prix</h3><p>Tarifs compétitifs avec un travail de haute qualité. Devis personnalisé, sans frais cachés.</p></div>
+        <div class="why-card"><div class="why-icon">📞</div><h3>Disponibilité</h3><p>Demandes traitées dans les 24h. Disponibles pour vos urgences, 7 jours sur 7.</p></div>
+        <div class="why-card"><div class="why-icon">🛡️</div><h3>Garanties</h3><p>Projet réalisé correctement, dans les délais, sans coûts cachés ni surprises. Assurance décennale.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2>FAQ : Plombier Paris & Île de France</h2>
+      <div class="faq-wrap">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">Les interventions urgentes sont-elles facturées plus chères ?</div><div class="faq-a">Le coût ne varie pas en fonction de l'urgence mais par rapport aux prestations réalisées et à la disponibilité de nos équipes.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment sont assurées les prestations ?</div><div class="faq-a">Nous disposons d'une assurance décennale et civile qui protège nos clients de tous dégâts causés durant 10 ans.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment repérer un problème de plomberie ?</div><div class="faq-a">Un diagnostic par un plombier permet de détecter rapidement tout problème et proposer des solutions à moindre coût. Appelez-nous au 07 52 89 28 15.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quel est le prix d'un dépannage d'urgence ?</div><div class="faq-a">Le prix est communiqué et expliqué par notre responsable client avant toute intervention. Devis toujours gratuit.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Comment repérer une fuite d'eau ?</div><div class="faq-a">Un compteur d'eau qui tourne anormalement en votre absence ou une trace d'humidité sont des signes qu'un diagnostic est nécessaire.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:white;padding:56px 0;text-align:center">
+    <div class="container">
+      <div class="section-label">Nos partenaires</div>
+      <h2>Nous travaillons avec</h2>
+      <p class="section-desc" style="margin:0 auto">Nos fournisseurs de confiance pour la plomberie : matériaux, stocks et délais garantis.</p>
+      <div class="partners-row">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a6306214ddd19d7da6cf_CEDEO-elec-plomberie.png" alt="CEDEO">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a630e7fe5c34ce65a97d_hager-elec-plomberie.png" alt="Hager">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a631a3ad0ff8881397cf_legrand-elec-plomberie.png" alt="Legrand">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a631c46ace338afa93d6_rexel-elec-plomberie.png" alt="Rexel">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a63157e0c5c6c6ab6c51_leroy-merling-fournisseur.png" alt="Leroy Merlin">
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">Nos autres domaines</div>
+      <h2>Découvrez nos autres expertises</h2>
+      <div class="xp-grid">
+        <div class="xp-card" onclick="showPage('electricite')"><img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf4dac92d236d7cf3cc_electric-plug.svg" alt=""><h3>Électricité</h3><p>Remise en état de votre installation électrique. Diagnostic et installation, quelle que soit l'urgence.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('menuiserie')"><img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf46c11753a6e3efaea_hand-saw.svg" alt=""><h3>Menuiserie</h3><p>Rangement, dressing sur-mesure, aménagement de cuisine et remplacement de fenêtres.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('isolation')"><img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf5e3e3d20172bcc6d5_insulating.svg" alt=""><h3>Isolation</h3><p>Isolation phonique et thermique pour un intérieur confortable toute l'année.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('revetements')"><img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976b0341f49e9ea9f002ff_roller-brush.svg" alt=""><h3>Revêtement intérieur</h3><p>Peinture, revêtements muraux, sol et plafond. Conseils et exécution selon vos goûts.</p><span class="link-arr">En savoir plus</span></div>
+      </div>
+    </div>
+  </section>
+</div><!-- /plomberie -->
+
+<!-- ████████████████████ PAGE: CHAUFFAGE ████████████████████ -->
+<div id="page-chauffage" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🔥 INNOV ECO GREEN</div>
+        <h1>Chauffagiste Paris & Île‑de‑France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> installe, entretient et dépanne tous vos systèmes de chauffage : chaudière, pompe à chaleur, radiateurs, plancher chauffant, VMC. Intervention rapide 7j/7 à Paris et en Île‑de‑France.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+      <div class="page-hero-right">
+        <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62b97962f3be976fad41c8a3_chauffage-.jpg" alt="Chauffage INNOV ECO GREEN">
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO SPLIT -->
+  <section style="background:white">
+    <div class="container">
+      <div class="intro-split">
+        <div class="intro-img-wrap">
+          <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62976c30cc47076d746563c3_chauffage-entretien.jpg" alt="Entretien chauffage INNOV ECO GREEN">
+        </div>
+        <div>
+          <h2>Quand faire appel à un chauffagiste ?</h2>
+          <p><strong>INNOV ECO GREEN</strong> résout tous vos problèmes de chauffage : panne de chaudière, radiateurs froids, manque de pression, installation d'un nouveau système. Délais de réponse rapides, devis gratuit en ligne.</p>
+          <p style="margin-top:12px">Nous sommes disponibles <strong>7j/7</strong>, week-end inclus. Un chauffage en panne en plein hiver ? Nos équipes interviennent en urgence sous 2h.</p>
+          <div class="av-list">
+            <div class="av-item"><div class="av-dot">✓</div>Devis gratuit sous 24h</div>
+            <div class="av-item"><div class="av-dot">📞</div>Urgences 7j/7 – 07 52 89 28 15</div>
+            <div class="av-item"><div class="av-dot">🏅</div>Techniciens certifiés RGE</div>
+            <div class="av-item"><div class="av-dot">🛡</div>Assurance décennale et civile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOS EXPERTISES CHAUFFAGE -->
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">Nos expertises chauffage</div>
+      <h2>Le chauffage selon votre besoin</h2>
+      <p class="section-desc">Retrouvez toutes nos expertises et prestations dans le domaine du chauffage et de la ventilation</p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">🔥</div>
+          <div class="svc-card-body"><h3>Chaudière gaz & fioul</h3><p>Installation, remplacement et entretien de chaudières à condensation haute performance. Marques Vaillant, De Dietrich, Viessmann.</p></div>
+        </div>
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">🌡️</div>
+          <div class="svc-card-body"><h3>Pompe à chaleur (PAC)</h3><p>Installation de PAC air/air et air/eau. Système économique et éco-responsable. Aides de l'État disponibles jusqu'à 4 000 €.</p></div>
+        </div>
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">🚿</div>
+          <div class="svc-card-body"><h3>Ballon thermodynamique</h3><p>Remplacement de votre chauffe-eau par un modèle thermodynamique pour réduire jusqu'à 70 % votre consommation d'eau chaude.</p></div>
+        </div>
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">🏡</div>
+          <div class="svc-card-body"><h3>Plancher chauffant</h3><p>Installation de plancher chauffant hydraulique ou électrique. Confort optimal et répartition homogène de la chaleur.</p></div>
+        </div>
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">🔧</div>
+          <div class="svc-card-body"><h3>Radiateurs & convecteurs</h3><p>Pose, déplacement et remplacement de radiateurs à inertie, électriques ou connectés. Purge et équilibrage du réseau.</p></div>
+        </div>
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">💨</div>
+          <div class="svc-card-body"><h3>VMC & ventilation</h3><p>Installation VMC simple et double flux. Amélioration de la qualité de l'air, réduction de l'humidité et des moisissures.</p></div>
+        </div>
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">🛠️</div>
+          <div class="svc-card-body"><h3>Dépannage & urgence</h3><p>Panne de chaudière, fuite de circuit, pression insuffisante : nos techniciens interviennent sous 2h en Île-de-France.</p></div>
+        </div>
+        <div class="svc-card">
+          <div style="height:170px;background:linear-gradient(135deg,#1a4a2e,#2d7a4f);display:flex;align-items:center;justify-content:center;font-size:60px">🏢</div>
+          <div class="svc-card-body"><h3>Chaufferie collective</h3><p>Rénovation complète de chaufferies collectives pour immeubles et copropriétés. Mise aux normes, contrats d'entretien.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Contactez nous</div>
+        <h2>Besoin d'un chauffagiste à Paris ou en Île‑de‑France ?</h2>
+        <p>Contactez nos équipes <strong>INNOV ECO GREEN</strong> pour poser vos questions. Devis gratuit, intervention rapide 7j/7.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+      <img class="cta-worker" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627a9b7611627cc830f03ef0_personnage%20ouvriers%20batiments%201.svg" alt="">
+    </div>
+  </div>
+
+  <!-- AIDES FINANCIÈRES -->
+  <section style="background:white">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+        <div>
+          <div class="section-label">Aides & subventions</div>
+          <h2>Financez votre projet de chauffage</h2>
+          <p style="color:var(--grey);margin-bottom:28px">De nombreux dispositifs permettent de réduire significativement le coût de votre installation. INNOV ECO GREEN vous accompagne dans le montage de votre dossier.</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="background:var(--green-pale);border-radius:10px;padding:20px 22px;border-left:4px solid var(--green-mid)">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;color:var(--green-dark);font-size:14px;margin-bottom:6px">🌱 Aides de l'État</div>
+              <p style="font-size:13px;color:var(--grey);line-height:1.7">Jusqu'à <strong>4 000 €</strong> pour l'installation d'une pompe à chaleur ou d'une chaudière à biomasse. Accessible à tous les propriétaires.</p>
+            </div>
+            <div style="background:var(--green-pale);border-radius:10px;padding:20px 22px;border-left:4px solid var(--green-mid)">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;color:var(--green-dark);font-size:14px;margin-bottom:6px">💡 Éco-prêt à taux zéro</div>
+              <p style="font-size:13px;color:var(--grey);line-height:1.7">Prêt à taux zéro jusqu'à <strong>50 000 €</strong> sur 20 ans pour financer vos travaux de rénovation énergétique sans avance de trésorerie.</p>
+            </div>
+            <div style="background:var(--green-pale);border-radius:10px;padding:20px 22px;border-left:4px solid var(--green-mid)">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;color:var(--green-dark);font-size:14px;margin-bottom:6px">⚡ CEE – Certificats d'Économie d'Énergie</div>
+              <p style="font-size:13px;color:var(--grey);line-height:1.7">Prime versée directement par les fournisseurs d'énergie pour toute installation d'équipement performant (PAC, chaudière à condensation, VMC double flux).</p>
+            </div>
+            <div style="background:var(--green-pale);border-radius:10px;padding:20px 22px;border-left:4px solid var(--green-mid)">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;color:var(--green-dark);font-size:14px;margin-bottom:6px">🏙️ Aides locales Île-de-France</div>
+              <p style="font-size:13px;color:var(--grey);line-height:1.7">Des aides complémentaires proposées par la Région Île-de-France et certaines communes pour améliorer la performance énergétique de votre logement.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Nos équipements</div>
+          <h2>Des marques de référence</h2>
+          <p style="color:var(--grey);margin-bottom:28px">INNOV ECO GREEN travaille exclusivement avec des fabricants reconnus pour leur fiabilité et leur efficacité énergétique.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div style="border:1.5px solid var(--border);border-radius:10px;padding:20px;text-align:center;background:var(--light)">
+              <div style="font-size:34px;margin-bottom:10px">🔥</div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:var(--green-dark)">Vaillant</div>
+              <div style="font-size:12px;color:var(--grey);margin-top:4px">Chaudières & PAC</div>
+            </div>
+            <div style="border:1.5px solid var(--border);border-radius:10px;padding:20px;text-align:center;background:var(--light)">
+              <div style="font-size:34px;margin-bottom:10px">🌡️</div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:var(--green-dark)">Viessmann</div>
+              <div style="font-size:12px;color:var(--grey);margin-top:4px">Chaudières condensation</div>
+            </div>
+            <div style="border:1.5px solid var(--border);border-radius:10px;padding:20px;text-align:center;background:var(--light)">
+              <div style="font-size:34px;margin-bottom:10px">💨</div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:var(--green-dark)">Atlantic</div>
+              <div style="font-size:12px;color:var(--grey);margin-top:4px">Ballons & VMC</div>
+            </div>
+            <div style="border:1.5px solid var(--border);border-radius:10px;padding:20px;text-align:center;background:var(--light)">
+              <div style="font-size:34px;margin-bottom:10px">🏡</div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:var(--green-dark)">De Dietrich</div>
+              <div style="font-size:12px;color:var(--grey);margin-top:4px">PAC & plancher chauffant</div>
+            </div>
+            <div style="border:1.5px solid var(--border);border-radius:10px;padding:20px;text-align:center;background:var(--light)">
+              <div style="font-size:34px;margin-bottom:10px">⚡</div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:var(--green-dark)">Daikin</div>
+              <div style="font-size:12px;color:var(--grey);margin-top:4px">Climatisation & PAC</div>
+            </div>
+            <div style="border:1.5px solid var(--border);border-radius:10px;padding:20px;text-align:center;background:var(--light)">
+              <div style="font-size:34px;margin-bottom:10px">🔧</div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;color:var(--green-dark)">Frisquet</div>
+              <div style="font-size:12px;color:var(--grey);margin-top:4px">Chaudières gaz</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI NOUS CHOISIR -->
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">Pourquoi nous choisir</div>
+      <h2>Pourquoi choisir INNOV ECO GREEN pour votre chauffage ?</h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">⚡</div><h3>Intervention rapide</h3><p>Techniciens disponibles 7j/7. Dépannage sous 2h en Île-de-France pour toutes vos pannes de chauffage.</p></div>
+        <div class="why-card"><div class="why-icon">🌱</div><h3>Certifiés RGE</h3><p>Qualification RGE indispensable pour accéder aux aides de l'État (CEE, subventions énergie).</p></div>
+        <div class="why-card"><div class="why-icon">💰</div><h3>Prix compétitifs</h3><p>Devis détaillé, transparent et gratuit. Nous vous aidons à obtenir toutes les aides disponibles pour réduire votre reste à charge.</p></div>
+        <div class="why-card"><div class="why-icon">🛡️</div><h3>Garanties solides</h3><p>Assurance décennale et civile professionnelle. Installations conformes aux normes DTU et réglementations en vigueur.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2>FAQ : Chauffagiste Paris & Île‑de‑France</h2>
+      <div class="faq-wrap">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">Quand faut-il remplacer sa chaudière ?</div><div class="faq-a">Une chaudière de plus de 15 ans ou qui tombe souvent en panne devrait être remplacée. Les modèles à condensation récents offrent un rendement supérieur à 109 %, ce qui réduit significativement vos factures de gaz. Nous vous proposons un diagnostic gratuit.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">L'entretien annuel de chaudière est-il obligatoire ?</div><div class="faq-a">Oui, l'entretien annuel est obligatoire pour toute chaudière individuelle dont la puissance est comprise entre 4 et 400 kW. Notre technicien vérifie la combustion, nettoie le brûleur et vous remet une attestation réglementaire.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Quelle aide pour installer une pompe à chaleur ?</div><div class="faq-a">Vous pouvez bénéficier des Certificats d'Économie d'Énergie et d'autres subventions de l'État. Notre équipe vous accompagne dans le montage de votre dossier afin d'optimiser votre financement.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Mes radiateurs ne chauffent plus, que faire ?</div><div class="faq-a">Des radiateurs froids ou tièdes indiquent souvent un problème de pression, d'embouage ou de purge. Nos techniciens diagnostiquent la cause en quelques minutes et interviennent immédiatement. Appelez-nous au 07 52 89 28 15.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Intervenez-vous en urgence le week-end ?</div><div class="faq-a">Oui, nos équipes sont disponibles 7j/7, week-end et jours fériés inclus. En cas de panne de chauffage, appelez-nous et nous organisons une intervention sous 2h en Île-de-France.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTENAIRES -->
+  <section style="background:var(--light);padding:56px 0;text-align:center">
+    <div class="container">
+      <div class="section-label">Nos partenaires</div>
+      <h2>Nous travaillons avec</h2>
+      <p class="section-desc" style="margin:0 auto">Nos fournisseurs de confiance pour le chauffage : matériaux, stocks et délais garantis.</p>
+      <div class="partners-row">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a6306214ddd19d7da6cf_CEDEO-elec-plomberie.png" alt="CEDEO">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a631c46ace338afa93d6_rexel-elec-plomberie.png" alt="Rexel">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a63157e0c5c6c6ab6c51_leroy-merling-fournisseur.png" alt="Leroy Merlin">
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTRES EXPERTISES -->
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Nos autres domaines</div>
+      <h2>Découvrez nos autres expertises</h2>
+      <div class="xp-grid">
+        <div class="xp-card" onclick="showPage('plomberie')"><img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf482aaa80a289f204c_water-pipe.svg" alt=""><h3>Plomberie</h3><p>Fuites, rénovation salle de bain, débouchage, curage canalisation. Intervention 7j/7.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('electricite')"><img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf4dac92d236d7cf3cc_electric-plug.svg" alt=""><h3>Électricité</h3><p>Mise en conformité, tableau électrique, prises, éclairage. Conformité aux normes en vigueur.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('isolation')"><img class="xp-icon" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf5e3e3d20172bcc6d5_insulating.svg" alt=""><h3>Isolation</h3><p>Isolation phonique et thermique pour un intérieur confortable et des économies sur vos factures.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('renovation-energetique')"><div style="font-size:38px;margin-bottom:14px">🌱</div><h3>Rénovation énergétique</h3><p>PAC, isolation, fenêtres. Bénéficiez des aides de l'État et CEE pour financer vos travaux.</p><span class="link-arr">En savoir plus</span></div>
+      </div>
+    </div>
+  </section>
+</div><!-- /chauffage -->
+
+<!-- ████████████████████ PAGE: ELECTRICITE ████████████████████ -->
+<div id="page-electricite" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">⚡ INNOV ECO GREEN</div>
+        <h1>Électricien Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous aide à remettre votre installation électrique en état de marche. Une installation fiable et sécurisée est primordiale – nos électriciens certifiés interviennent rapidement sous 2h en Île-de-France.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+      <div class="page-hero-right">
+        <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627acdf4dac92d236d7cf3cc_electric-plug.svg" alt="Électricité" style="width:200px;margin:auto;filter:brightness(10)">
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Notre expertise</div>
+      <h2>Quand faire appel à un électricien ?</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:32px">
+        <div>
+          <p>Que ce soit à domicile ou en milieu professionnel, une installation électrique fiable est primordiale. <strong>INNOV ECO GREEN</strong> vous offre des services d'électricité de haute qualité à Paris et en Île-de-France.</p>
+          <div style="margin-top:24px;display:flex;flex-direction:column;gap:16px">
+            <div style="background:var(--green-pale);border-radius:8px;padding:18px 20px;border-left:3px solid var(--green-mid)">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--green-dark);font-size:14px;margin-bottom:6px">⚡ Interrupteurs défectueux</div>
+              <p style="font-size:13px;color:var(--grey)">Un interrupteur qui ne fonctionne pas correctement ou provoque des courts-circuits : appelez-nous immédiatement.</p>
+            </div>
+            <div style="background:var(--green-pale);border-radius:8px;padding:18px 20px;border-left:3px solid var(--green-mid)">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--green-dark);font-size:14px;margin-bottom:6px">🔌 Tableaux électriques disjonctés</div>
+              <p style="font-size:13px;color:var(--grey)">Un tableau qui disjoncte fréquemment peut être signe d'un surcroît de charge ou d'un défaut dans le circuit.</p>
+            </div>
+            <div style="background:var(--green-pale);border-radius:8px;padding:18px 20px;border-left:3px solid var(--green-mid)">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--green-dark);font-size:14px;margin-bottom:6px">🏠 Rénovations et modifications</div>
+              <p style="font-size:13px;color:var(--grey)">Pour ajouter des prises, lumières ou rénover votre installation : notre équipe assure une installation conforme.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:var(--green-dark);margin-bottom:14px">L'importance d'un bon éclairage</h3>
+          <p>L'éclairage influence notre humeur, notre productivité et notre santé. Un bon éclairage transforme l'ambiance d'une pièce. <strong>INNOV ECO GREEN</strong> vous aide à choisir l'emplacement, l'intensité et le type d'éclairage adapté.</p>
+          <div class="av-list" style="margin-top:20px">
+            <div class="av-item"><div class="av-dot">💡</div>Spots et LED intégrés</div>
+            <div class="av-item"><div class="av-dot">🔦</div>Installation apparente, semi-encastrée, encastrée</div>
+            <div class="av-item"><div class="av-dot">✅</div>Mise en conformité aux normes en vigueur</div>
+            <div class="av-item"><div class="av-dot">⏱</div>Intervention sous 2h en Île-de-France</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Contactez nous</div>
+        <h2>Besoin d'un électricien à Paris ?</h2>
+        <p>Notre équipe est prête à vous aider pour tous vos besoins en électricité. Devis gratuit, intervention rapide.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Pourquoi nous choisir</div>
+      <h2>Pourquoi choisir INNOV ECO GREEN ?</h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">⚡</div><h3>Réactivité</h3><p>Intervention sous 2h en Île-de-France pour toutes vos urgences électriques.</p></div>
+        <div class="why-card"><div class="why-icon">💰</div><h3>Prix compétitifs</h3><p>Services de qualité à des prix compétitifs. Devis personnalisé, transparent et gratuit.</p></div>
+        <div class="why-card"><div class="why-icon">🔧</div><h3>Solutions sur-mesure</h3><p>Quelle que soit la demande, notre équipe fournit des solutions adaptées à vos besoins.</p></div>
+        <div class="why-card"><div class="why-icon">🛡️</div><h3>Garanties solides</h3><p>Garantie sur la sécurité de vos installations et le respect des délais de livraison.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">FAQ</div>
+      <h2>FAQ : Électricien Paris & Île de France</h2>
+      <div class="faq-wrap">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)">Combien de temps durent les travaux électriques ?</div><div class="faq-a">Le temps nécessaire dépend de la complexité des travaux. Nous vous fournirons une estimation précise lors du devis. Nous intervenons généralement sous deux heures en Île-de-France pour vos urgences.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Intervenez-vous en urgence ?</div><div class="faq-a">Oui, nous intervenons en urgence. Nos équipes sont disponibles 7j/7 pour répondre à tous vos besoins électriques urgents sur Paris et Île-de-France.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Proposez-vous des solutions d'isolation ?</div><div class="faq-a">Oui, nous proposons également des solutions d'isolation pour améliorer le confort thermique de votre intérieur, en complément de vos travaux d'électricité.</div></div>
+      </div>
+    </div>
+  </section>
+</div><!-- /electricite -->
+
+<!-- ████████████████████ PAGE: ISOLATION ████████████████████ -->
+<div id="page-isolation" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🌿 INNOV ECO GREEN</div>
+        <h1>Isolation Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous accompagne pour l'isolation phonique, thermique et extérieure de votre logement. Réduisez votre facture énergétique tout en améliorant votre confort.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Notre expertise</div>
+      <h2>L'isolation : une nécessité pour votre confort</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:32px">
+        <div>
+          <p>L'isolation phonique, thermique et extérieure est essentielle pour garantir votre confort au quotidien. En misant sur une bonne isolation, vous assurez également la pérennité de votre projet de rénovation énergétique.</p>
+          <p style="margin-top:14px">Il faut choisir une isolation qui respecte l'inertie de la maison pour avoir un confort en été comme en hiver, compatible avec les matériaux de vos murs.</p>
+          <div class="av-list" style="margin-top:20px">
+            <div class="av-item"><div class="av-dot">🌡</div>Isolation thermique (laine de verre et roche)</div>
+            <div class="av-item"><div class="av-dot">🔇</div>Isolation phonique</div>
+            <div class="av-item"><div class="av-dot">🏠</div>Isolation extérieure sous bardage ou sous enduit</div>
+            <div class="av-item"><div class="av-dot">🏗</div>Doublage et faux plafonds</div>
+            <div class="av-item"><div class="av-dot">🛡</div>Garantie décennale Groupama</div>
+          </div>
+        </div>
+        <div>
+          <div style="background:var(--green-pale);border-radius:12px;padding:28px">
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--green-dark);margin-bottom:12px">🌱 Vos droits en matière d'isolation</h3>
+            <p style="font-size:13.5px;color:var(--grey);line-height:1.75">La loi donne droit au locataire d'exiger au propriétaire des travaux de rénovation d'isolation si le logement est mal isolé. En cas de refus, le locataire peut saisir la justice et obtenir réparation.</p>
+          </div>
+          <div style="background:var(--green-pale);border-radius:12px;padding:28px;margin-top:16px">
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:800;color:var(--green-dark);margin-bottom:12px">💰 Un interlocuteur unique</h3>
+            <p style="font-size:13.5px;color:var(--grey);line-height:1.75">Vous avez un seul interlocuteur dédié tout au long du projet : votre responsable client. Il coordonne l'ensemble des acteurs pour une réalisation sans friction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Contactez nous</div>
+        <h2>Un projet d'isolation à Paris ou en Île de France ?</h2>
+        <p>Contactez INNOV ECO GREEN pour poser vos questions. Devis gratuit, un interlocuteur dédié.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--light)">
+    <div class="container">
+      <div class="section-label">Pourquoi nous choisir</div>
+      <h2>Pourquoi choisir INNOV ECO GREEN ?</h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">🌟</div><h3>Qualité</h3><p>Nous nous efforçons de vous fournir les meilleurs services. Fiers de chaque projet réalisé pour nos clients.</p></div>
+        <div class="why-card"><div class="why-icon">💰</div><h3>Prix abordables</h3><p>Services de qualité à des prix abordables. Réalisation au mieux de nos capacités pour satisfaire vos attentes.</p></div>
+        <div class="why-card"><div class="why-icon">👂</div><h3>Écoute</h3><p>De la prise de contact à la résolution finale : excellentes prestations et expérience client agréable.</p></div>
+        <div class="why-card"><div class="why-icon">⏱</div><h3>Ponctualité</h3><p>Service professionnel et ponctuel. Nous livrons toujours à temps, conformément aux normes de sécurité.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:white;padding:56px 0;text-align:center">
+    <div class="container">
+      <h2>Nos fournisseurs en isolation</h2>
+      <p class="section-desc" style="margin:0 auto 32px">Matériaux, stocks, options et délais de livraison garantis.</p>
+      <div class="partners-row">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a6306214ddd19d7da6cf_CEDEO-elec-plomberie.png" alt="CEDEO">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a63157e0c5c6c6ab6c51_leroy-merling-fournisseur.png" alt="Leroy Merlin">
+        <img class="partner-logo" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62c2a631c46ace338afa93d6_rexel-elec-plomberie.png" alt="Rexel">
+      </div>
+    </div>
+  </section>
+</div><!-- /isolation -->
+
+<!-- ████████████████████ PAGE: MENUISERIE ████████████████████ -->
+<div id="page-menuiserie" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🪚 INNOV ECO GREEN</div>
+        <h1>Menuisier Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous accompagne pour la pose sur-mesure de vos escaliers, volets, fenêtres, portes, garages, portails, baies vitrées et aménagements de cuisine.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Notre expertise</div>
+      <h2>La menuiserie selon votre besoin</h2>
+      <p>Trouver le bon menuisier est un choix très important. Il est celui qui embellira et maximisera vos espaces. <strong>INNOV ECO GREEN</strong> et ses équipes de menuisiers vous accompagnent pour tous vos projets.</p>
+      <div class="svc-grid" style="margin-top:32px;grid-template-columns:repeat(3,1fr)">
+        <div class="svc-card" style="border-top-color:var(--green-mid)">
+          <div style="height:170px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🍳</div>
+          <div class="svc-card-body"><h3>Aménagement de cuisine</h3><p>Vous emménagez et la cuisine ne vous convient pas ? INNOV ECO GREEN réalise le réaménagement et vous aide à choisir votre électroménager.</p></div>
+        </div>
+        <div class="svc-card" style="border-top-color:var(--green-mid)">
+          <div style="height:170px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🚪</div>
+          <div class="svc-card-body"><h3>Portes & fenêtres</h3><p>Vos portes font du bruit ? Votre toit fuit ? Remplacement de fenêtres pour renforcer l'isolation thermique. Travaux en urgence ou rénovation complète.</p></div>
+        </div>
+        <div class="svc-card" style="border-top-color:var(--green-mid)">
+          <div style="height:170px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🗄️</div>
+          <div class="svc-card-body"><h3>Rangements sur-mesure</h3><p>Dressing sur-mesure, rangements WC, couverture de tableau électrique. Nos experts réalisent des aménagements fonctionnels adaptés à votre espace.</p></div>
+        </div>
+        <div class="svc-card" style="border-top-color:var(--green-mid)">
+          <div style="height:170px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🔑</div>
+          <div class="svc-card-body"><h3>Serrurerie</h3><p>Changement de serrures, systèmes de verrouillage (applique, encastrés, 3 points, à crochet) et rénovation de poignées de porte.</p></div>
+        </div>
+        <div class="svc-card" style="border-top-color:var(--green-mid)">
+          <div style="height:170px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🏚️</div>
+          <div class="svc-card-body"><h3>Aménagement des combles</h3><p>Transformez vos combles en espace de vie habitable. Nos menuisiers réalisent tous les aménagements nécessaires.</p></div>
+        </div>
+        <div class="svc-card" style="border-top-color:var(--green-mid)">
+          <div style="height:170px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🪟</div>
+          <div class="svc-card-body"><h3>Baies vitrées & portails</h3><p>Installation et remplacement de baies vitrées, portails et volets. Amélioration de l'isolation thermique et de la sécurité.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Contactez nous</div>
+        <h2>Un projet de menuiserie à Paris ?</h2>
+        <p>Contactez INNOV ECO GREEN pour poser vos questions. Nos menuisiers répondent dans les 24h.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Pourquoi nous choisir</div>
+      <h2>Pourquoi choisir INNOV ECO GREEN ?</h2>
+      <div class="why-grid">
+        <div class="why-card"><div class="why-icon">⚡</div><h3>Réactivité</h3><p>Équipes de professionnels qui assurent votre réussite dans tous les projets confiés.</p></div>
+        <div class="why-card"><div class="why-icon">💰</div><h3>Prix imbattable</h3><p>INNOV ECO GREEN propose ses services à un tarif imbattable pour concrétiser vos envies.</p></div>
+        <div class="why-card"><div class="why-icon">📞</div><h3>Disponibilité</h3><p>Demandes traitées dans les 24h. Temps de réponse rapide, satisfaction garantie.</p></div>
+        <div class="why-card"><div class="why-icon">🌿</div><h3>Éco-responsable</h3><p>Matériaux durables et pratiques respectueuses de l'environnement pour chaque chantier.</p></div>
+      </div>
+    </div>
+  </section>
+</div><!-- /menuiserie -->
+
+<!-- ████████████████████ PAGE: RENOVATION INTÉRIEUR ████████████████████ -->
+<div id="page-renovation-interieur" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🏠 INNOV ECO GREEN</div>
+        <h1>Rénovation Intérieure Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous accompagne pour toutes vos rénovations intérieures : salon, chambre, cuisine, salle de bain. Des professionnels à votre écoute pour transformer votre espace de vie.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+      <div class="page-hero-right">
+        <img src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/62b963d5464a2e6cb8a0b5ce_illu-header-home.jpg" alt="Rénovation intérieure">
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Nos services</div>
+      <h2>La rénovation intérieure selon vos besoins</h2>
+      <div class="xp-grid" style="margin-top:32px">
+        <div class="xp-card" onclick="showPage('revetements')"><div style="font-size:36px;margin-bottom:12px">🎨</div><h3>Revêtement intérieur</h3><p>Peinture, papier peint, sols, plafonds. Petites retouches ou rénovation totale. Murs, plafonds et sols.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('plomberie')"><div style="font-size:36px;margin-bottom:12px">🚿</div><h3>Plomberie</h3><p>Installation, diagnostic et réparation de toutes vos installations. Fuites, remplacement, mises aux normes.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('electricite')"><div style="font-size:36px;margin-bottom:12px">⚡</div><h3>Électricité</h3><p>Diagnostic et résolution de vos problèmes électriques en toute sécurité, dans les normes en vigueur.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('menuiserie')"><div style="font-size:36px;margin-bottom:12px">🪚</div><h3>Menuiserie</h3><p>Fenêtres, meubles sur-mesure, rangements optimisés pour maximiser l'utilisation de votre espace.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('isolation')"><div style="font-size:36px;margin-bottom:12px">🌡️</div><h3>Isolation</h3><p>Isolation des murs, plafonds et sols pour améliorer votre efficacité énergétique et réduire vos factures.</p><span class="link-arr">En savoir plus</span></div>
+        <div class="xp-card" onclick="showPage('renovation-sdb')"><div style="font-size:36px;margin-bottom:12px">🛁</div><h3>Salle de bain</h3><p>Rénovation complète ou partielle : lavabo, douche italienne, baignoire, carrelage, plomberie.</p><span class="link-arr">En savoir plus</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Envie de vous lancer ?</div>
+        <h2>Demandez votre devis de rénovation !</h2>
+        <p>INNOV ECO GREEN vous fournit un devis adapté et à moindre coût pour vos travaux de rénovation intérieure.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+    </div>
+  </div>
+</div><!-- /renovation-interieur -->
+
+<!-- ████████████████████ PAGE: RENOVATION ENERGETIQUE ████████████████████ -->
+<div id="page-renovation-energetique" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🌱 INNOV ECO GREEN</div>
+        <h1>Rénovation Énergétique Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous accompagne dans la réalisation d'une isolation adaptée et la mise en place de systèmes économes en énergie. Réduisez votre empreinte carbone et vos factures.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Nos solutions énergétiques</div>
+      <h2>Tout pour votre rénovation énergétique</h2>
+      <div class="svc-grid" style="grid-template-columns:repeat(3,1fr);margin-top:32px">
+        <div class="svc-card"><div style="height:170px;background:linear-gradient(135deg,var(--green-pale),var(--lime));display:flex;align-items:center;justify-content:center;font-size:60px">🪟</div><div class="svc-card-body"><h3>Pose de fenêtres</h3><p>Remplacement de vos fenêtres et baies vitrées pour améliorer l'isolation thermique et réaliser des économies.</p></div></div>
+        <div class="svc-card"><div style="height:170px;background:linear-gradient(135deg,var(--green-pale),var(--lime));display:flex;align-items:center;justify-content:center;font-size:60px">🌡️</div><div class="svc-card-body"><h3>Isolation thermique</h3><p>Isolation murale, extérieure sous bardage, en intérieur, combles. Laine de verre et roche, doublage.</p></div></div>
+        <div class="svc-card"><div style="height:170px;background:linear-gradient(135deg,var(--green-pale),var(--lime));display:flex;align-items:center;justify-content:center;font-size:60px">♨️</div><div class="svc-card-body"><h3>Pompe à chaleur</h3><p>Installation de pompes à chaleur air/air et air/eau. Systèmes économiques et écologiques pour votre chauffage.</p></div></div>
+        <div class="svc-card"><div style="height:170px;background:linear-gradient(135deg,var(--green-pale),var(--lime));display:flex;align-items:center;justify-content:center;font-size:60px">🚿</div><div class="svc-card-body"><h3>Chauffe-eau thermodynamique</h3><p>Installation de ballons thermodynamiques pour une eau chaude sanitaire économique et écologique.</p></div></div>
+        <div class="svc-card"><div style="height:170px;background:linear-gradient(135deg,var(--green-pale),var(--lime));display:flex;align-items:center;justify-content:center;font-size:60px">🌬️</div><div class="svc-card-body"><h3>VMC & Ventilation</h3><p>Système de ventilation mécanique contrôlée pour une meilleure qualité de l'air intérieur et moins d'humidité.</p></div></div>
+        <div class="svc-card"><div style="height:170px;background:linear-gradient(135deg,var(--green-pale),var(--lime));display:flex;align-items:center;justify-content:center;font-size:60px">❄️</div><div class="svc-card-body"><h3>Climatisation</h3><p>Installation de climatisation réversible. Confort en été, chauffage en hiver, économies d'énergie toute l'année.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--green-pale);padding:60px 0">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center">
+        <div>
+          <div class="section-label">Aides financières</div>
+          <h2>Des aides pour financer votre projet</h2>
+          <p>Plusieurs aides financières sont disponibles pour alléger votre budget de rénovation énergétique :</p>
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <div style="background:white;border-radius:8px;padding:14px 18px;border-left:3px solid var(--green-mid);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13.5px;color:var(--green-dark)">🌱 Aides de l'État</div>
+            <div style="background:white;border-radius:8px;padding:14px 18px;border-left:3px solid var(--green-mid);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13.5px;color:var(--green-dark)">💶 Éco-prêt à taux zéro</div>
+            <div style="background:white;border-radius:8px;padding:14px 18px;border-left:3px solid var(--green-mid);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13.5px;color:var(--green-dark)">⚡ Prime Coup de pouce énergie</div>
+            <div style="background:white;border-radius:8px;padding:14px 18px;border-left:3px solid var(--green-mid);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13.5px;color:var(--green-dark)">📉 TVA à 5,5% pour travaux énergétiques</div>
+            <div style="background:white;border-radius:8px;padding:14px 18px;border-left:3px solid var(--green-mid);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13.5px;color:var(--green-dark)">🏠 Exonération taxe foncière</div>
+          </div>
+        </div>
+        <div>
+          <div style="background:white;border-radius:14px;padding:32px;box-shadow:0 8px 30px rgba(45,122,79,.1)">
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:17px;font-weight:800;color:var(--green-dark);margin-bottom:14px">Témoignage client</h3>
+            <p style="font-size:14px;color:var(--grey);line-height:1.75;font-style:italic">"Nous augmentions constamment notre chauffage sans parvenir à réchauffer nos pièces. INNOV ECO GREEN a effectué un diagnostic et indiqué que l'isolation de nos pièces n'était pas optimale et que nos fenêtres devaient être changées. Après travaux, nous avons résolu tous nos problèmes et réalisé des économies d'énergie."</p>
+            <div style="margin-top:14px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--dark)">Client satisfait, Paris 75</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Lancez votre projet</div>
+        <h2>Demandez votre devis de rénovation énergétique</h2>
+        <p>INNOV ECO GREEN vous accompagne de A à Z dans votre projet : diagnostic, travaux, dossiers d'aides.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+    </div>
+  </div>
+</div><!-- /renovation-energetique -->
+
+<!-- ████████████████████ PAGE: REVETEMENTS ████████████████████ -->
+<div id="page-revetements" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🎨 INNOV ECO GREEN</div>
+        <h1>Revêtements Intérieurs Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous conseille et réalise tous vos travaux de revêtement : peinture, sol, mur, plafond. Petites retouches ou rénovation complète, nous avons les solutions.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Nos prestations</div>
+      <h2>Tous types de revêtements intérieurs</h2>
+      <div class="svc-grid" style="grid-template-columns:repeat(3,1fr);margin-top:32px">
+        <div class="svc-card"><div style="height:160px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🖌️</div><div class="svc-card-body"><h3>Peinture</h3><p>Acrylique, glycéro, toile de verre. Textures mate, satin, velours, brillant. Intérieur et extérieur.</p></div></div>
+        <div class="svc-card"><div style="height:160px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🏠</div><div class="svc-card-body"><h3>Revêtement sol</h3><p>Lino, sol PVC, stratifié, moquette, carrelage, parquet. Pour bureaux, studios et logements.</p></div></div>
+        <div class="svc-card"><div style="height:160px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🧱</div><div class="svc-card-body"><h3>Revêtement mural</h3><p>Papier peint, stuc, tissu, bardage, toile de verre, laque, crépi, tasseaux. Large choix de finitions.</p></div></div>
+        <div class="svc-card"><div style="height:160px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">⬜</div><div class="svc-card-body"><h3>Plafond</h3><p>Peinture plafond, faux plafond, isolation plafond. Remise à neuf et rénovation complète.</p></div></div>
+        <div class="svc-card"><div style="height:160px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🚿</div><div class="svc-card-body"><h3>Carrelage salle de bain</h3><p>Remplacement de carrelage pour parquet adapté pièces humides. Esthétique et résistant à l'humidité.</p></div></div>
+        <div class="svc-card"><div style="height:160px;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:56px">🏢</div><div class="svc-card-body"><h3>Revêtement professionnel</h3><p>Bureaux, commerces, locaux professionnels. Expertise pour tous types de locaux et matériaux.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Envie de vous lancer ?</div>
+        <h2>Demandez votre devis revêtement à Paris</h2>
+        <p>INNOV ECO GREEN vous conseille et exécute vos demandes selon vos besoins et vos goûts.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+    </div>
+  </div>
+</div><!-- /revetements -->
+
+<!-- ████████████████████ PAGE: RENOVATION SDB ████████████████████ -->
+<div id="page-renovation-sdb" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🛁 INNOV ECO GREEN</div>
+        <h1>Rénovation Salle de Bain Paris & Île de France</h1>
+        <p>La salle de bain est l'espace le plus intime de votre maison. <strong style="color:white">INNOV ECO GREEN</strong> vous accompagne dans chaque étape : lavabo, douche italienne, baignoire, carrelage, plomberie.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Nos services salle de bain</div>
+      <h2>Quand rénover votre salle de bain ?</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px">
+        <div>
+          <p>Chez INNOV ECO GREEN, nous comprenons l'importance d'une salle de bains bien rénovée. Voici quelques signes qu'il est temps de rénover :</p>
+          <div style="margin-top:18px;display:flex;flex-direction:column;gap:12px">
+            <div style="background:var(--green-pale);border-radius:8px;padding:16px 18px;border-left:3px solid var(--green-mid)"><strong style="color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px">🚰 Appareils obsolètes</strong><p style="font-size:13px;color:var(--grey);margin-top:5px">Robinets qui fuient, baignoire rayée, toilettes défaillantes : il est temps d'appeler un professionnel.</p></div>
+            <div style="background:var(--green-pale);border-radius:8px;padding:16px 18px;border-left:3px solid var(--green-mid)"><strong style="color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px">💧 Moisissures et humidité</strong><p style="font-size:13px;color:var(--grey);margin-top:5px">Les problèmes d'humidité peuvent causer des dommages structurels. Une rénovation améliore la ventilation.</p></div>
+            <div style="background:var(--green-pale);border-radius:8px;padding:16px 18px;border-left:3px solid var(--green-mid)"><strong style="color:var(--green-dark);font-family:'Montserrat',sans-serif;font-size:13px">✨ Changement de style</strong><p style="font-size:13px;color:var(--grey);margin-top:5px">Envie d'un nouveau design ? Nous vous aidons à choisir un style qui correspond à vos goûts.</p></div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-size:17px;font-weight:800;color:var(--green-dark);margin-bottom:14px">Nos services salle de bain</h3>
+          <div class="av-list">
+            <div class="av-item"><div class="av-dot">🔧</div>Installation plomberie complète</div>
+            <div class="av-item"><div class="av-dot">🚿</div>Douche à l'italienne, baignoire</div>
+            <div class="av-item"><div class="av-dot">🪟</div>Carrelage, sol et mur</div>
+            <div class="av-item"><div class="av-dot">🏅</div>Certification PMR (personnes à mobilité réduite)</div>
+            <div class="av-item"><div class="av-dot">⚡</div>Électricité et éclairage salle de bain</div>
+            <div class="av-item"><div class="av-dot">🌿</div>Matériaux durables et éco-responsables</div>
+          </div>
+          <p style="font-size:13px;color:var(--grey);margin-top:16px">Une pose classique peut prendre une journée, des rénovations plus complexes de 1 à 3 semaines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Lancez votre projet</div>
+        <h2>Demandez votre devis salle de bain</h2>
+        <p>INNOV ECO GREEN vous accompagne de A à Z pour la rénovation de votre salle de bain à Paris.</p>
+        <span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span>
+      </div>
+    </div>
+  </div>
+</div><!-- /renovation-sdb -->
+
+<!-- ████████████████████ PAGE: RENOVATION APPARTEMENT ████████████████████ -->
+<div id="page-renovation-appartement" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🏢 INNOV ECO GREEN</div>
+        <h1>Rénovation Appartement Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous accompagne dans la rénovation complète ou partielle de votre appartement : revêtements, plomberie, électricité, menuiserie, isolation.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+  <section style="background:white"><div class="container">
+    <div class="section-label">Pourquoi rénover votre appartement ?</div>
+    <h2>Les avantages de la rénovation</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px">
+      <div style="background:var(--green-pale);border-radius:12px;padding:28px;border-top:3px solid var(--green-mid)"><div style="font-size:36px;margin-bottom:12px">📈</div><h3 style="font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--green-dark);margin-bottom:9px">Valorisation</h3><p style="font-size:13.5px;color:var(--grey)">Une rénovation bien réfléchie augmente considérablement la valeur de votre bien sur le marché immobilier.</p></div>
+      <div style="background:var(--green-pale);border-radius:12px;padding:28px;border-top:3px solid var(--green-mid)"><div style="font-size:36px;margin-bottom:12px">⚡</div><h3 style="font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--green-dark);margin-bottom:9px">Économies d'énergie</h3><p style="font-size:13.5px;color:var(--grey)">Solutions d'isolation qui optimisent votre confort thermique et réduisent vos coûts énergétiques.</p></div>
+      <div style="background:var(--green-pale);border-radius:12px;padding:28px;border-top:3px solid var(--green-mid)"><div style="font-size:36px;margin-bottom:12px">🏠</div><h3 style="font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800;color:var(--green-dark);margin-bottom:9px">Confort amélioré</h3><p style="font-size:13.5px;color:var(--grey)">Mise à jour des installations pour un cadre de vie agréable et sécurisé au quotidien.</p></div>
+    </div>
+  </div></section>
+  <div class="cta-band"><div class="cta-band-inner"><div class="cta-band-text"><div class="section-label">Envie de vous lancer ?</div><h2>Estimez la rénovation de votre appartement</h2><p>INNOV ECO GREEN vous accompagne de la prise de contact jusqu'à la remise des clés.</p><span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span></div></div></div>
+</div><!-- /renovation-appartement -->
+
+<!-- ████████████████████ PAGE: RENOVATION MAISON ████████████████████ -->
+<div id="page-renovation-maison" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🏡 INNOV ECO GREEN</div>
+        <h1>Rénovation Maison Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous accompagne dans tous vos travaux de rénovation de maison : intérieure, extérieure, isolation, plomberie, électricité et menuiserie.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+  <section style="background:white"><div class="container">
+    <h2>La rénovation de maison avec INNOV ECO GREEN</h2>
+    <p style="margin-top:16px;max-width:700px;color:var(--grey);line-height:1.75">Acheter ou construire une maison est un aboutissement. La rénovation est une étape indispensable. Un problème d'humidité, une isolation imparfaite, un revêtement qui s'abîme : autant de raisons de se lancer dans des travaux. INNOV ECO GREEN vous accompagne pour entretenir votre maison de l'intérieur comme de l'extérieur.</p>
+    <div style="margin-top:32px;background:var(--green-pale);border-radius:12px;padding:28px">
+      <p style="font-size:14px;color:var(--text);line-height:1.8"><strong>💰 Budget indicatif :</strong> Pour une maison de 70 m², comptez généralement 10 000 à 30 000€ pour un rafraîchissement, et 55 000 à 80 000€ pour une rénovation lourde complète. <strong>INNOV ECO GREEN</strong> vous fournit un devis précis et personnalisé selon vos besoins.</p>
+    </div>
+  </div></section>
+  <div class="cta-band"><div class="cta-band-inner"><div class="cta-band-text"><div class="section-label">Envie de vous lancer ?</div><h2>Estimez la rénovation de votre maison</h2><p>INNOV ECO GREEN vous accompagne pour des rénovations sur mesure à Paris et en Île-de-France.</p><span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span></div></div></div>
+</div>
+
+<!-- ████████████████████ PAGE: RENOVATION ENTREPRISE ████████████████████ -->
+<div id="page-renovation-entreprise" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">🏢 INNOV ECO GREEN</div>
+        <h1>Rénovation Locaux Entreprise Paris & Île de France</h1>
+        <p><strong style="color:white">INNOV ECO GREEN</strong> vous accompagne pour la rénovation de vos locaux professionnels : bureaux, commerces, restaurants. Expertise et respect des normes garantis.</p>
+        <span class="btn-primary" onclick="showPage('contact')">✦ Estimez Vos Travaux</span>
+      </div>
+    </div>
+  </div>
+  <section style="background:white"><div class="container">
+    <h2>Rénover vos locaux professionnels</h2>
+    <p style="margin-top:16px;color:var(--grey);max-width:700px;line-height:1.75">Que vous soyez responsable d'une boulangerie, d'une agence comptable ou tout autre type d'entreprise, l'entretien de vos locaux est essentiel. Le savoir-faire de INNOV ECO GREEN est très vaste et nos experts vous aident à trouver les solutions les plus adaptées.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px">
+      <div style="background:var(--green-pale);border-radius:10px;padding:22px;border-left:3px solid var(--green-mid)"><div style="font-size:32px;margin-bottom:10px">🪟</div><h3 style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;color:var(--green-dark);margin-bottom:8px">Cloisons & aménagement</h3><p style="font-size:13px;color:var(--grey)">Cloisons amovibles pour séparer les bureaux, espaces de travail ergonomiques.</p></div>
+      <div style="background:var(--green-pale);border-radius:10px;padding:22px;border-left:3px solid var(--green-mid)"><div style="font-size:32px;margin-bottom:10px">🎨</div><h3 style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;color:var(--green-dark);margin-bottom:8px">Revêtements & peinture</h3><p style="font-size:13px;color:var(--grey)">Changement de revêtement de sol, rafraîchissement de peinture des murs et plafonds.</p></div>
+      <div style="background:var(--green-pale);border-radius:10px;padding:22px;border-left:3px solid var(--green-mid)"><div style="font-size:32px;margin-bottom:10px">🔄</div><h3 style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;color:var(--green-dark);margin-bottom:8px">Rénovation complète</h3><p style="font-size:13px;color:var(--grey)">Transformation totale de vos locaux : décor, équipements, installations techniques.</p></div>
+    </div>
+  </div></section>
+  <div class="cta-band"><div class="cta-band-inner"><div class="cta-band-text"><div class="section-label">Envie de vous lancer ?</div><h2>Demandez votre devis locaux entreprise</h2><p>INNOV ECO GREEN vous accompagne pour tous vos projets de rénovation de locaux professionnels.</p><span class="btn-white" onclick="showPage('contact')">Contacter INNOV ECO GREEN</span></div></div></div>
+</div>
+
+<!-- ████████████████████ PAGE: CONTACT ████████████████████ -->
+<div id="page-contact" class="page">
+  <div class="page-hero" style="padding-bottom:64px">
+    <div class="page-hero-inner" style="padding-bottom:0">
+      <div class="page-hero-left" style="padding-bottom:0">
+        <div class="hero-badge">📞 INNOV ECO GREEN</div>
+        <h1>Contactez-nous</h1>
+        <p>Obtenez votre devis gratuit en 24h. Nos experts répondent rapidement à toutes vos demandes.</p>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start">
+        <div>
+          <div class="section-label">Formulaire de contact</div>
+          <h2>Demandez votre devis gratuit</h2>
+          <p style="color:var(--grey);margin-bottom:28px">Expliquez-nous votre besoin et vos envies, nous vous fournissons un devis adapté à moindre coût.</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <input id="f-nom" type="text" placeholder="Votre nom et prénom *" style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:'Open Sans',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='var(--border)'">
+            <input id="f-email" type="email" placeholder="Votre email *" style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:'Open Sans',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='var(--border)'">
+            <input id="f-tel" type="tel" placeholder="Votre téléphone" style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:'Open Sans',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='var(--border)'">
+            <select id="f-travaux" style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:'Open Sans',sans-serif;color:var(--grey);outline:none;background:white">
+              <option value="">Type de travaux *</option>
+              <option>Plomberie</option>
+              <option>Chauffage</option>
+              <option>Électricité</option>
+              <option>Isolation</option>
+              <option>Menuiserie</option>
+              <option>Revêtements intérieurs</option>
+              <option>Rénovation énergétique</option>
+              <option>Rénovation appartement</option>
+              <option>Rénovation maison</option>
+              <option>Rénovation locaux entreprise</option>
+              <option>Autre</option>
+            </select>
+            <textarea id="f-message" placeholder="Décrivez votre projet *" rows="5" style="width:100%;padding:13px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:'Open Sans',sans-serif;outline:none;resize:vertical;transition:border-color .2s" onfocus="this.style.borderColor='var(--green-mid)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+            <button class="btn-primary" style="width:100%;justify-content:center;font-size:15px;padding:14px" onclick="envoyerDevis()">🌱 Envoyer ma demande de devis</button>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">Nos coordonnées</div>
+          <h2>INNOV ECO GREEN</h2>
+          <div style="display:flex;flex-direction:column;gap:20px;margin-top:20px">
+            <div style="display:flex;align-items:flex-start;gap:14px">
+              <div style="width:42px;height:42px;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📞</div>
+              <div><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--dark);margin-bottom:3px">Téléphone</div><a href="tel:0752892815" style="color:var(--green-mid);font-weight:700;font-size:17px;font-family:'Montserrat',sans-serif">07 52 89 28 15</a><div style="font-size:12px;color:var(--grey);margin-top:2px">Disponible 7j/7</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:14px">
+              <div style="width:42px;height:42px;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📧</div>
+              <div><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--dark);margin-bottom:3px">Email</div><div style="color:var(--green-mid);font-size:15px"><a href="mailto:ieg.93320@gmail.com" style="color:rgba(255,255,255,.65)">ieg.93320@gmail.com</a></div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:14px">
+              <div style="width:42px;height:42px;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📍</div>
+              <div><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--dark);margin-bottom:3px">Zone d'intervention</div><div style="color:var(--grey);font-size:14px;line-height:1.6">Paris & Île-de-France<br>Départements : 75, 77, 78, 91, 92, 93, 94, 95</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:14px">
+              <div style="width:42px;height:42px;border-radius:50%;background:var(--green-pale);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⏰</div>
+              <div><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--dark);margin-bottom:3px">Horaires</div><div style="color:var(--grey);font-size:14px;line-height:1.6">Lundi – Samedi : 8h – 20h<br>Dimanche : Urgences uniquement</div></div>
+            </div>
+          </div>
+          <div style="background:var(--green-pale);border-radius:12px;padding:22px;margin-top:28px">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;color:var(--green-dark);font-size:14px;margin-bottom:8px">🌿 Notre engagement écologique</div>
+            <p style="font-size:13px;color:var(--grey);line-height:1.7">INNOV ECO GREEN s'engage à utiliser des matériaux durables et des pratiques respectueuses de l'environnement pour chaque chantier. Partenaires : Cedeo, Grohe, Hansgrohe, Villeroy & Boch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /contact -->
+
+<!-- ████████████████████ PAGE: CLIMATISATION ████████████████████ -->
+<div id="page-climatisation" class="page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-hero-left">
+        <div class="hero-badge">❄️ INNOV ECO GREEN</div>
+        <h1>Climatisation</h1>
+        <p>Installation, entretien et dépannage de vos systèmes de climatisation à Paris & Île-de-France. Confort thermique garanti toute l'année.</p>
+        <div class="hero-ctas">
+          <span class="btn-white" onclick="showPage('contact')">Devis gratuit 24h</span>
+          <a href="tel:0752892815" class="hero-phone" style="color:white">📞 07 52 89 28 15</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:white">
+    <div class="container">
+      <div class="section-label">Nos services climatisation</div>
+      <h2>Solutions de climatisation sur mesure</h2>
+      <p class="section-desc">INNOV ECO GREEN installe et entretient tous types de systèmes de climatisation pour particuliers et professionnels en Île-de-France.</p>
+      <div class="svc-grid" style="margin-top:40px">
+        <div class="svc-card">
+          <div class="svc-card-body">
+            <h3>❄️ Climatisation split</h3>
+            <p>Installation de systèmes split mono et multi-splits pour un confort optimal dans chaque pièce.</p>
+          </div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card-body">
+            <h3>🌬️ Climatisation réversible</h3>
+            <p>Systèmes réversibles chaud/froid pour une solution tout-en-un économique et écologique.</p>
+          </div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card-body">
+            <h3>🔧 Entretien & maintenance</h3>
+            <p>Entretien annuel, nettoyage des filtres, recharge en fluide frigorigène et contrôle des performances.</p>
+          </div>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card-body">
+            <h3>🚨 Dépannage urgent</h3>
+            <p>Intervention rapide en cas de panne. Diagnostic et réparation de tous types de climatiseurs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-band-inner">
+      <div class="cta-band-text">
+        <div class="section-label">Devis gratuit</div>
+        <h2>Un projet climatisation ? Contactez-nous</h2>
+        <p>Nos techniciens certifiés interviennent rapidement à Paris et en Île-de-France. Devis gratuit sous 24h.</p>
+        <span class="btn-white" onclick="showPage('contact')">Demander un devis</span>
+      </div>
+    </div>
+  </div>
+</div><!-- /climatisation -->
+
+<!-- ████████████████████ FOOTER ████████████████████ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-txt">🌿 INNOV <span>ECO GREEN</span></div>
+        <div class="footer-desc">Spécialiste de la rénovation éco-responsable et de l'aménagement pour les particuliers et entreprises à Paris & Île-de-France.</div>
+        <div style="display:flex;gap:12px;align-items:center;margin-top:10px">
+          <img style="height:36px;width:auto;filter:brightness(0) invert(1);opacity:.5" src="https://cdn.prod.website-files.com/6279383071a695621116a3bb/627a40fc9135c8858801c717_CAPEB.png" alt="CAPEB">
+        </div>
+      </div>
+      <div>
+        <h4>Nos expertises</h4>
+        <ul>
+          <li><a onclick="showPage('renovation-interieur')">Rénovation intérieure</a></li>
+          <li><a onclick="showPage('renovation-energetique')">Rénovation énergétique</a></li>
+          <li><a onclick="showPage('plomberie')">Plomberie</a></li>
+          <li><a onclick="showPage('chauffage')">Chauffage</a></li>
+          <li><a onclick="showPage('electricite')">Électricité</a></li>
+          <li><a onclick="showPage('menuiserie')">Menuiserie</a></li>
+          <li><a onclick="showPage('isolation')">Isolation</a></li>
+          <li><a onclick="showPage('revetements')">Revêtements</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>INNOV ECO GREEN</h4>
+        <ul>
+          <li><a onclick="showPage('accueil')">Accueil</a></li>
+          <li><a onclick="showPage('renovation-appartement')">Rénovation appartement</a></li>
+          <li><a onclick="showPage('renovation-maison')">Rénovation maison</a></li>
+          <li><a onclick="showPage('renovation-entreprise')">Locaux entreprise</a></li>
+          <li><a onclick="showPage('renovation-sdb')">Salle de bain</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nous contacter</h4>
+        <p style="font-size:13px">Une question ?</p>
+        <div class="footer-phone">📞 07 52 89 28 15</div>
+        <div class="footer-email"><a href="mailto:ieg.93320@gmail.com" style="color:rgba(255,255,255,.65)">ieg.93320@gmail.com</a></div>
+        <div class="footer-addr">Paris & Île-de-France<br>Départements 75, 77, 78, 91, 92, 93, 94, 95</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 INNOV ECO GREEN – Tous droits réservés</span>
+      <span>Mentions légales &nbsp;|&nbsp; Politique de confidentialité</span>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE -->
+<div class="cookie-bar" id="cookiebar">
+  <p>Nous utilisons des cookies pour améliorer votre expérience sur notre site. 🌿</p>
+  <span class="cookie-link" onclick="document.getElementById('cookiebar').style.display='none'">En savoir plus</span>
+  <button class="cookie-btn" onclick="document.getElementById('cookiebar').style.display='none'">Accepter</button>
+</div>
+
+<script>
+function envoyerDevis() {
+  const nom = document.getElementById('f-nom').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const tel = document.getElementById('f-tel').value.trim();
+  const travaux = document.getElementById('f-travaux').value;
+  const message = document.getElementById('f-message').value.trim();
+  if (!nom || !email || !travaux || !message) {
+    alert('Merci de remplir tous les champs obligatoires (*).');
+    return;
+  }
+  const sujet = encodeURIComponent('Demande de devis – ' + travaux);
+  const corps = encodeURIComponent(
+    'Nom : ' + nom + '\n' +
+    'Email : ' + email + '\n' +
+    'Téléphone : ' + (tel || 'Non renseigné') + '\n' +
+    'Type de travaux : ' + travaux + '\n\n' +
+    'Message :\n' + message
+  );
+  window.location.href = 'mailto:ieg.93320@gmail.com?subject=' + sujet + '&body=' + corps;
+}
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + id);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  const navLink = document.querySelector('.nav-link[data-page="' + id + '"]');
+  if (navLink) navLink.classList.add('active');
+}
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  showPage('accueil');
+});
+</script>
+</body>
+</html>
